@@ -1,10 +1,12 @@
-﻿namespace final_proyect_backend.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace final_proyect_backend.Models
 {
     
     public class Users
     {
-
-        public int ID { get; set; }
+        [Key]
+        public int UserId { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public int Rol { get; set; }

@@ -1,8 +1,11 @@
-﻿namespace final_proyect_backend.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace final_proyect_backend.Models
 {
     public class Offers
     {
-        public int ID { get; set; }
+        [Key]
+        public int OfferId { get; set; }
 
         public int EnterpriseId { get; set; }
         public string Tittle { get; set; }
