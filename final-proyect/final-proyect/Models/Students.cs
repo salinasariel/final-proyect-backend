@@ -2,7 +2,6 @@
 {
     public class Students : Users
     {
-        public string FullName { get; set; }
         public int Dni { get; set; }
         public int Cuit { get; set; }
         public string PhoneNumber { get; set; }

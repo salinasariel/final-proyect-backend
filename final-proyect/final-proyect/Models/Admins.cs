@@ -3,7 +3,6 @@
     
     public class Admins : Users
     {
-        public string AdminName { get; set; }
         public string WorkArea {  get; set; }
 
     }

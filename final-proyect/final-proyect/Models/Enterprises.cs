@@ -2,7 +2,6 @@
 {
     public class Enterprises : Users
     {
-        public String CompanyName { get; set; }
         public String City { get; set; }
         public String WebPage {  get; set; }
         public String AboutCompany { get; set; }

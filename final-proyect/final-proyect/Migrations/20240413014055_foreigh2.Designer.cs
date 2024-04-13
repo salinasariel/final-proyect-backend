@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using final_proyect.Data;
 
@@ -10,9 +11,10 @@ using final_proyect.Data;
 namespace final_proyect.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240413014055_foreigh2")]
+    partial class foreigh2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.28");
@@ -119,10 +121,6 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -143,6 +141,10 @@ namespace final_proyect.Migrations
             modelBuilder.Entity("final_proyect_backend.Models.Admins", b =>
                 {
                     b.HasBaseType("final_proyect_backend.Models.Users");
+
+                    b.Property<string>("AdminName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("WorkArea")
                         .IsRequired()
@@ -165,6 +167,10 @@ namespace final_proyect.Migrations
                         .HasColumnName("Enterprises_City");
 
                     b.Property<string>("CompanyAbout")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CompanyName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -238,6 +244,10 @@ namespace final_proyect.Migrations
 
                     b.Property<int>("FileNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("HighSchoolFile")
                         .IsRequired()

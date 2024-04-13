@@ -19,17 +19,7 @@ namespace final_proyect.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Applications>()
-                .HasOne(a => a.Users)
-                .WithMany()
-                .HasForeignKey(a => a.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Applications>()
-                .HasOne(a => a.Offers)
-                .WithMany()
-                .HasForeignKey(a => a.OfferId)
-                .OnDelete(DeleteBehavior.Restrict);
+            
         }
     }
 }
