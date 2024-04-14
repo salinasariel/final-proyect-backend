@@ -1,8 +1,11 @@
 using final_proyect.Data;
+using final_proyect.Interfaces;
+using final_proyect.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IUserService, UserService>();
 
 
 builder.Services.AddControllers();

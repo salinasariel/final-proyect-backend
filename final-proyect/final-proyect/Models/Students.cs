@@ -13,7 +13,6 @@
 
         public string Tittle {  get; set; }
         public int FileNumber { get; set; }
-        public DateTime InitDate { get; set; }
         public int CareerAge {  get; set; }
         public int EnglishLevel {get; set; }
 
