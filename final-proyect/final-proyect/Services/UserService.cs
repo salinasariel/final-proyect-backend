@@ -65,6 +65,8 @@ namespace final_proyect.Services
             return _context.Enterprises.Where(u => u.Rol == 2 && u.UserState == true).ToList();
         }
 
+        
+
         //ADMINS
     }
 }

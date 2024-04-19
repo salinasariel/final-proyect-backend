@@ -80,5 +80,8 @@ namespace final_proyect.Controllers
                 return StatusCode(500);
             }
         }
+
+        /*[HttpPost("NewOffer")]
+        public ActionResult<int> CreateOffer*/
     }
 }
