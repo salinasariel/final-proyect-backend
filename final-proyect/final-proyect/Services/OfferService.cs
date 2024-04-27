@@ -2,6 +2,7 @@
 using final_proyect.Interfaces;
 using final_proyect_backend.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace final_proyect.Services
 {
@@ -18,7 +19,7 @@ namespace final_proyect.Services
         {
             try
             {
-                offer.OfferState = false;
+                offer.OfferState = true;
                 _context.Add(offer);
                 _context.SaveChanges();
                 return offer.OfferId;
@@ -32,6 +33,13 @@ namespace final_proyect.Services
         public List<Offers> GetOffers()
         {
             return _context.Offers.Where(u => u.OfferState == true).ToList();
+        }
+
+        public void DeleteOffers()
+        {
+            var allOffers = _context.Offers.ToList();
+            _context.Offers.RemoveRange(allOffers);
+            _context.SaveChanges();
         }
 
     }

@@ -2,6 +2,7 @@
 using final_proyect.Services;
 using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace final_proyect.Controllers
@@ -44,6 +45,13 @@ namespace final_proyect.Controllers
                 Console.WriteLine("Error al obtener las ofertas");
                 return StatusCode(500);
             }
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteAll()
+        {
+            _offerService.DeleteOffers();
+            return Ok();
         }
 
     }
