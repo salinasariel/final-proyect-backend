@@ -49,6 +49,30 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpDelete("DeleteStudent/{userId}")]
+
+        public ActionResult DeleteStudent(int userId) 
+        {
+            try
+            {
+                var result = _userService.DeleteStudentById(userId);
+
+                if (result)
+                {
+                    return Ok("Estudiante eliminado correctamente");
+                }
+                else
+                { 
+                    return NotFound("Estudiante no encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al eliminar estudiante: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor");
+            }
+        }
+
         // EMPRESAS
 
         [HttpGet("GetAllEnterprisesAviables")]
@@ -78,6 +102,30 @@ namespace final_proyect.Controllers
             {
                 Console.WriteLine($"Error al crear la empresa");
                 return StatusCode(500);
+            }
+        }
+
+        [HttpDelete("DeleteEnterprise/{userId}")]
+
+        public ActionResult DeleteEnterprise(int userId)
+        {
+            try
+            {
+                var result = _userService.DeleteEnterpriseById(userId);
+
+                if (result)
+                {
+                    return Ok("Empresa eliminada correctamente");
+                }
+                else
+                {
+                    return NotFound("Empresa no encontrada");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al eliminar empresa: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor");
             }
         }
 

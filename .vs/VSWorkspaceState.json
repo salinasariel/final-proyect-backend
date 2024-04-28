@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\final-proyect",
+    "\\final-proyect\\final-proyect",
+    "\\final-proyect\\final-proyect\\Controllers"
   ],
+  "SelectedNode": "\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
   "PreviewInSolutionExplorer": false
 }

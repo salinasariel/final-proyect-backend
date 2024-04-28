@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
+    "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
+    "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
         "projectName": "final-proyect",
-        "projectPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
-        "packagesPath": "C:\\Users\\Ariel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
+        "projectPath": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -92,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -32,7 +32,7 @@ namespace final_proyect.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al crear estudiante" );
+                Console.WriteLine("Error al crear estudiante");
                 throw;
             }
         }
@@ -40,6 +40,31 @@ namespace final_proyect.Services
         public List<Students> GetStudents()
         {
             return _context.Students.Where(u => u.Rol == 3).ToList();
+        }
+
+        public bool DeleteStudentById(int userId)
+        {
+            try
+            {
+                var studentToDelete = _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
+
+                if (studentToDelete != null)
+                {
+                    _context.Students.Remove(studentToDelete);
+                    _context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Error al eliminar estudiante: {ex.Message}");
+                throw;
+            }
         }
 
         //EMPRESAS
@@ -60,12 +85,37 @@ namespace final_proyect.Services
                 throw;
             }
         }
-        public List<Enterprises> GetEnterprisesAviables() 
+        public List<Enterprises> GetEnterprisesAviables()
         {
             return _context.Enterprises.Where(u => u.Rol == 2 && u.UserState == true).ToList();
         }
 
-        
+        public bool DeleteEnterpriseById(int userId)
+        {
+            try
+            {
+                var enterpriseToDelete = _context.Enterprises.FirstOrDefault(e => e.UserId == userId && e.Rol == 2);
+
+                if (enterpriseToDelete != null)
+                {
+                    _context.Enterprises.Remove(enterpriseToDelete);
+                    _context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Error al eliminar empresa: {ex.Message}");
+                throw;
+            }
+
+
+        }
 
         //ADMINS
     }

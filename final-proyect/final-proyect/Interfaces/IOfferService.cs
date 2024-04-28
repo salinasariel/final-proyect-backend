@@ -6,6 +6,6 @@ namespace final_proyect.Interfaces
     {
         int CreateOffers(Offers offer);
         List<Offers> GetOffers();
-        public void DeleteOffers();
+        bool DeleteOfferById(int OfferId);
     }
 }

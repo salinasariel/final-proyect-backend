@@ -35,12 +35,37 @@ namespace final_proyect.Services
             return _context.Offers.Where(u => u.OfferState == true).ToList();
         }
 
-        public void DeleteOffers()
+        public bool DeleteOfferById(int OfferId)
+        {
+            try
+            {
+                var offerToDelete = _context.Offers.FirstOrDefault(o => o.OfferId == OfferId);
+
+                if (offerToDelete != null)
+                {
+                    _context.Offers.Remove(offerToDelete);
+                    _context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Error al eliminar oferta laboral: {ex.Message}");
+                throw;
+            }
+        }
+
+        /*public void DeleteOffers()
         {
             var allOffers = _context.Offers.ToList();
             _context.Offers.RemoveRange(allOffers);
             _context.SaveChanges();
-        }
+        }*/
 
     }
 }

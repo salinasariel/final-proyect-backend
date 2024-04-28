@@ -27,7 +27,7 @@ namespace final_proyect.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al crear la empresa");
+                Console.WriteLine("Error al crear la oferta");
                 return StatusCode(500);
             }
         }
@@ -47,12 +47,30 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpDelete]
-        public IActionResult DeleteAll()
+        [HttpDelete("DeleteOffer/{OfferId}")]
+        public IActionResult DeleteOffer(int OfferId)
         {
-            _offerService.DeleteOffers();
-            return Ok();
+            try
+            {
+                var result = _offerService.DeleteOfferById(OfferId);
+
+                if (result)
+                {
+                    return Ok("Oferta laboral eliminada correctamente");
+                }
+                else
+                {
+                    return NotFound("Oferta laboral no encontrada");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al eliminar oferta laboral: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor");
+            }
         }
+
+        
 
     }
 }
