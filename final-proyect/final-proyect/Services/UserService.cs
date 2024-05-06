@@ -42,7 +42,42 @@ namespace final_proyect.Services
             return _context.Students.Where(u => u.Rol == 3).ToList();
         }
 
-        public bool DeleteStudentById(int userId)
+        public Students GetStudentById(int userId)
+        {
+            return _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
+        }
+
+        public void UpdateStudent(Students student)
+        {
+            var existingStudent = _context.Students.FirstOrDefault(s => s.UserId == student.UserId && s.Rol == 3);
+            if (existingStudent != null)
+            {
+                existingStudent.Name = student.Name;
+                existingStudent.Email = student.Email;
+                existingStudent.Password = student.Password;
+                existingStudent.PhoneNumber = student.PhoneNumber;
+                existingStudent.City = student.City;
+                existingStudent.Address = student.Address;
+                existingStudent.BirthDate = student.BirthDate;
+                existingStudent.Sex = student.Sex;
+                existingStudent.CivilStatus = student.CivilStatus;
+                existingStudent.Tittle = student.Tittle;
+                existingStudent.FileNumber = student.FileNumber;
+                existingStudent.CareerAge = student.CareerAge;
+                existingStudent.EnglishLevel = student.EnglishLevel;
+                existingStudent.CvFile = student.CvFile;
+                existingStudent.HighSchoolFile = student.HighSchoolFile;
+                existingStudent.CoursesFile = student.CoursesFile;
+
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Estudiante no encontrado.");
+            }
+        }
+
+            public bool DeleteStudentById(int userId)
         {
             try
             {
@@ -118,5 +153,29 @@ namespace final_proyect.Services
         }
 
         //ADMINS
+
+        public int CreateAdmin(Admins admin)
+        {
+            try
+            {
+                admin.Rol = 1;
+                _context.Add(admin);
+                _context.SaveChanges();
+                return admin.UserId;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al crear admin: {ex.Message}");
+                throw;
+            }
+        }
+
+        //Usuarios
+
+        public List<Users> GetAllUsers()
+        {
+            return _context.Users.Where(u => u.Rol == 3 || u.Rol == 2 || u.Rol == 1 ).ToList();
+
+        }
     }
 }

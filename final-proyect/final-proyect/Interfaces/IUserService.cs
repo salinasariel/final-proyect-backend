@@ -14,5 +14,9 @@ namespace final_proyect.Interfaces
 
         bool DeleteStudentById(int userId);
         bool DeleteEnterpriseById(int userId);
+        List<Users> GetAllUsers();
+        int CreateAdmin(Admins admin);
+        public Students? GetStudentById(int userId);
+        public void UpdateStudent(Students student);
     }
 }

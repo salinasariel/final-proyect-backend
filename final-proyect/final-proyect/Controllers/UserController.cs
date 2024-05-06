@@ -49,6 +49,43 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpGet("GetStudentsById/{userId}")]
+        public ActionResult<Students> GetStudentById(int userId)
+        {
+            var student = _userService.GetStudentById(userId);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            return Ok(student);
+        }
+
+        [HttpPut("UpdateStudent/{userId}")]
+        public IActionResult UpdateStudent(int userId, Students student)
+        {
+            if (userId != student.UserId)
+            {
+                return BadRequest();
+            }
+
+            var existingStudent = _userService.GetStudentById(userId);
+            if (existingStudent == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                _userService.UpdateStudent(student);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al actualizar estudiante: {ex.Message}");
+                return StatusCode(500);
+            }
+        }
+
         [HttpDelete("DeleteStudent/{userId}")]
 
         public ActionResult DeleteStudent(int userId) 
@@ -131,5 +168,38 @@ namespace final_proyect.Controllers
 
         /*[HttpPost("NewOffer")]
         public ActionResult<int> CreateOffer*/
+
+        //Admin
+
+        public ActionResult<int> CreateAdmin([FromBody] Admins admin)
+        {
+            try
+            {
+                var adminId = _userService.CreateAdmin(admin);
+                return Ok(adminId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al crear admin: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor");
+            }
+        }
+
+        //Usuarios
+
+        [HttpGet("GetAllUser")]
+        public ActionResult<List<Users>> GetAllUsers()
+        {
+            try
+            {
+                var allUsers = _userService.GetAllUsers();
+                return Ok(allUsers);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener usuarios: {ex.Message}");
+                return StatusCode(500);
+            }
+        }
     }
 }
