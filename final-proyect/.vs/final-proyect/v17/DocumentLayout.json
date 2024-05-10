@@ -1,66 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\",
+  "WorkspaceRootPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\models\\offers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\offers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\offerscotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\offerscotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|c:\\users\\pc\\desktop\\backend_pp\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\auth\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\auth\\loginresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,192 +58,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Offers.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Offers.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Offers.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Offers.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Offers.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAcAAAAaAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Program.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
+              "RelativeToolTip": "final-proyect\\Program.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwCwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T21:10:25.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OfferService.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Services\\OfferService.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
-              "RelativeToolTip": "final-proyect\\Services\\OfferService.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwDkAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IOfferService.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IOfferService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Interfaces\\IOfferService.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IOfferService.cs",
-              "RelativeToolTip": "final-proyect\\Interfaces\\IOfferService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAmwE4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.566Z",
+              "WhenOpened": "2024-05-10T01:43:41.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Students.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Students.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Students.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Students.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Students.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Title": "LoginResult.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Auth\\LoginResult.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Models\\Auth\\LoginResult.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Auth\\LoginResult.cs",
+              "RelativeToolTip": "final-proyect\\Models\\Auth\\LoginResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.57Z",
+              "WhenOpened": "2024-05-10T01:21:21.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Users.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Users.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "final-proyect\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.574Z",
+              "WhenOpened": "2024-05-10T00:17:15.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "final-proyect\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAA+wBIAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "final-proyect\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
               "RelativeToolTip": "final-proyect\\Services\\UserService.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAA2wC4AAABbAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T19:08:17.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OffersCotroller.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ViewState": "AQIAACsAAABAzczMzEwswDsAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.549Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json",
+              "RelativeDocumentMoniker": "final-proyect\\appsettings.json",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json",
+              "RelativeToolTip": "final-proyect\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-09T23:34:23.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAzAAAA",
+              "DocumentIndex": 5,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "final-proyect\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Program.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
-              "RelativeToolTip": "final-proyect\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.554Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Enterprises.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Enterprises.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Enterprises.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "final-proyect\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\WeatherForecast.cs",
-              "RelativeToolTip": "final-proyect\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "final-proyect\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T19:08:17.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json",
-              "RelativeDocumentMoniker": "final-proyect\\appsettings.json",
-              "ToolTip": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\appsettings.json",
-              "RelativeToolTip": "final-proyect\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-28T19:08:17.601Z"
+              "WhenOpened": "2024-04-28T19:08:17.578Z",
+              "EditorCaption": ""
             }
           ]
         },

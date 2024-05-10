@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
+    "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
+    "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "projectUniqueName": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
         "projectName": "final-proyect",
-        "projectPath": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pc\\Desktop\\backend_PP\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
+        "projectPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "packagesPath": "C:\\Users\\Mathy\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.28, )"
@@ -63,7 +67,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.28, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
@@ -72,6 +76,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[6.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -97,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

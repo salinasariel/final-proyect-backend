@@ -3,8 +3,9 @@
     "",
     "\\final-proyect",
     "\\final-proyect\\final-proyect",
-    "\\final-proyect\\final-proyect\\Controllers"
+    "\\final-proyect\\final-proyect\\Controllers",
+    "\\final-proyect\\final-proyect\\Services"
   ],
-  "SelectedNode": "\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
+  "SelectedNode": "\\final-proyect\\final-proyect\\Services\\UserService.cs",
   "PreviewInSolutionExplorer": false
 }

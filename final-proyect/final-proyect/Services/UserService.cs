@@ -1,9 +1,11 @@
 ﻿using final_proyect.Data;
 using final_proyect.Interfaces;
+using final_proyect.Models.Auth;
 using final_proyect_backend.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace final_proyect.Services
 {
@@ -20,7 +22,47 @@ namespace final_proyect.Services
         {
             _context = context;
         }
-        //ESTUDIANTES
+
+        // ----------------------------------- LOGIN SERVICES ------------------------------------------------------------------
+        public LoginResult Login(string mail, string password)
+        {
+            LoginResult result = new LoginResult();
+
+            Users? usersLogin = _context.Users.SingleOrDefault(u => u.Email == mail);
+
+            if (usersLogin == null)
+            {
+                throw new ArgumentNullException("mail o password no pueden ser nulos.");
+            }
+
+            else if (usersLogin != null)
+            {
+                if (usersLogin.Password == password)
+                {
+                    result.Success = true;
+                    result.Message = "Login OK";
+                }
+                else
+                {
+                    result.Success = false;
+                    result.Message = "password incorrecto";
+                }
+            }
+            else
+            {
+                result.Success = false;
+                result.Message = "mail incorrecto";
+            }
+
+            return result;
+        }
+
+        public Users? GetUserByEmail(string email)
+        {
+            return _context.Users.SingleOrDefault(u => u.Email == email);
+        }
+
+        // ---------------------------------------------------- STUDENTS SERVICES --------------------------------------------
         public int CreateStudent(Students student)
         {
             try
@@ -77,7 +119,7 @@ namespace final_proyect.Services
             }
         }
 
-            public bool DeleteStudentById(int userId)
+     public bool DeleteStudentById(int userId)
         {
             try
             {
@@ -102,7 +144,7 @@ namespace final_proyect.Services
             }
         }
 
-        //EMPRESAS
+        // --------------------------------------------- ENTERPRISE SERVICES -----------------------------------------------------
 
         public int CreateEnterprise(Enterprises enterprise)
         {
@@ -135,7 +177,7 @@ namespace final_proyect.Services
                 {
                     _context.Enterprises.Remove(enterpriseToDelete);
                     _context.SaveChanges();
-                    return true;
+                   return true;
                 }
                 else
                 {
@@ -149,33 +191,9 @@ namespace final_proyect.Services
                 throw;
             }
 
-
         }
 
-        //ADMINS
+       
 
-        public int CreateAdmin(Admins admin)
-        {
-            try
-            {
-                admin.Rol = 1;
-                _context.Add(admin);
-                _context.SaveChanges();
-                return admin.UserId;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al crear admin: {ex.Message}");
-                throw;
-            }
-        }
-
-        //Usuarios
-
-        public List<Users> GetAllUsers()
-        {
-            return _context.Users.Where(u => u.Rol == 3 || u.Rol == 2 || u.Rol == 1 ).ToList();
-
-        }
     }
 }

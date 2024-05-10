@@ -1,4 +1,5 @@
 ﻿using final_proyect.Interfaces;
+using final_proyect.Models.DTO;
 using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -34,13 +35,13 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpPost("NewStudents")]
+        [HttpPost("CreateStudents")]
         public ActionResult<int> CreateStudent([FromBody] Students student)
         {
             try
             {
                 var studentId = _userService.CreateStudent(student);
-                return Ok(studentId);
+                return Ok($"Estudiande ID:{studentId} creado correctamente ");
             }
             catch (Exception ex)
             {
@@ -55,7 +56,7 @@ namespace final_proyect.Controllers
             var student = _userService.GetStudentById(userId);
             if (student == null)
             {
-                return NotFound();
+                return BadRequest("No existe estudiante con esa ID");
             }
             return Ok(student);
         }
@@ -88,7 +89,7 @@ namespace final_proyect.Controllers
 
         [HttpDelete("DeleteStudent/{userId}")]
 
-        public ActionResult DeleteStudent(int userId) 
+        public ActionResult DeleteStudent(int userId)
         {
             try
             {
@@ -99,7 +100,7 @@ namespace final_proyect.Controllers
                     return Ok("Estudiante eliminado correctamente");
                 }
                 else
-                { 
+                {
                     return NotFound("Estudiante no encontrado");
                 }
             }
@@ -166,40 +167,9 @@ namespace final_proyect.Controllers
             }
         }
 
-        /*[HttpPost("NewOffer")]
-        public ActionResult<int> CreateOffer*/
 
-        //Admin
+        
 
-        public ActionResult<int> CreateAdmin([FromBody] Admins admin)
-        {
-            try
-            {
-                var adminId = _userService.CreateAdmin(admin);
-                return Ok(adminId);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al crear admin: {ex.Message}");
-                return StatusCode(500, "Error interno del servidor");
-            }
-        }
 
-        //Usuarios
-
-        [HttpGet("GetAllUser")]
-        public ActionResult<List<Users>> GetAllUsers()
-        {
-            try
-            {
-                var allUsers = _userService.GetAllUsers();
-                return Ok(allUsers);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al obtener usuarios: {ex.Message}");
-                return StatusCode(500);
-            }
-        }
     }
 }
