@@ -25,7 +25,7 @@ namespace final_proyect.Controllers
                 var offerId = _offerService.CreateOffers(offer);
                 return Ok(offerId);
             }
-            catch (Exception ex)
+            catch 
             {
                 Console.WriteLine("Error al crear la oferta");
                 return StatusCode(500);
@@ -40,7 +40,7 @@ namespace final_proyect.Controllers
                 var offers = _offerService.GetOffers();
                 return Ok(offers);
             }
-            catch (Exception ex)
+            catch 
             {
                 Console.WriteLine("Error al obtener las ofertas");
                 return StatusCode(500);

@@ -12,7 +12,7 @@ using System.Text;
 
 namespace final_proyect.Controllers
 {
-    [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : Controller
@@ -44,7 +44,8 @@ namespace final_proyect.Controllers
             {
                 Users user = _userService.GetUserByEmail(credentials.Mail);
 
-                var securityPassword = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["Authentication:Key"]));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Authentication:SecretForKey"]));
+
 
                 var claimsForToken = new List<Claim>();
                 claimsForToken.Add(new Claim("email", user.Email));

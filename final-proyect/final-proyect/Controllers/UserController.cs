@@ -121,7 +121,7 @@ namespace final_proyect.Controllers
                 var enterprise = _userService.GetEnterprisesAviables();
                 return Ok(enterprise);
             }
-            catch (Exception ex)
+            catch
             {
                 Console.WriteLine($"Error al obtener las empresas");
                 return StatusCode(500);
@@ -136,7 +136,7 @@ namespace final_proyect.Controllers
                 var enterpriseId = _userService.CreateEnterprise(enterprise);
                 return Ok(enterprise);
             }
-            catch (Exception ex)
+            catch 
             {
                 Console.WriteLine($"Error al crear la empresa");
                 return StatusCode(500);

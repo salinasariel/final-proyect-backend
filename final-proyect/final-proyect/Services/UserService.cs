@@ -23,7 +23,8 @@ namespace final_proyect.Services
             _context = context;
         }
 
-        // ----------------------------------- LOGIN SERVICES ------------------------------------------------------------------
+        // - INICIAR SESION ---------------------------------------------------------------------------
+       
         public LoginResult Login(string mail, string password)
         {
             LoginResult result = new LoginResult();
@@ -57,12 +58,7 @@ namespace final_proyect.Services
             return result;
         }
 
-        public Users? GetUserByEmail(string email)
-        {
-            return _context.Users.SingleOrDefault(u => u.Email == email);
-        }
-
-        // ---------------------------------------------------- STUDENTS SERVICES --------------------------------------------
+        // - REGISTRO ESTUDIANTE -----------------------------------------------------------
         public int CreateStudent(Students student)
         {
             try
@@ -70,24 +66,25 @@ namespace final_proyect.Services
                 student.Rol = 3;
                 _context.Add(student);
                 _context.SaveChanges();
+
+                Console.WriteLine($"{student.Name} registrado exitosamente.");
                 return student.UserId;
+                
             }
-            catch (Exception ex)
+            catch 
             {
                 Console.WriteLine("Error al crear estudiante");
                 throw;
             }
         }
 
-        public List<Students> GetStudents()
-        {
-            return _context.Students.Where(u => u.Rol == 3).ToList();
-        }
 
-        public Students GetStudentById(int userId)
-        {
-            return _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
-        }
+        // - OBTENER LISTA DE ESTUDIANTES ----------------------------------------------
+        public List<Students> GetStudents()
+                {
+                    return _context.Students.Where(u => u.Rol == 3).ToList();
+                }
+
 
         public void UpdateStudent(Students student)
         {
@@ -119,7 +116,23 @@ namespace final_proyect.Services
             }
         }
 
-     public bool DeleteStudentById(int userId)
+        // - OBTENER ESTUDIANTE POR MAIL ------------------------------------------------
+
+        public Users? GetUserByEmail(string email)
+        {
+            return _context.Users.SingleOrDefault(u => u.Email == email);
+        }
+
+        // - OBTENER ESTUDIANTE POR ID -------------------------------------------------
+
+        public Students GetStudentById(int userId)
+        {
+            return _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
+        }
+
+        // - BORRAR ESTUDIANTE ----------------------------------------------------------
+
+        public bool DeleteStudentById(int userId)
         {
             try
             {
@@ -144,7 +157,7 @@ namespace final_proyect.Services
             }
         }
 
-        // --------------------------------------------- ENTERPRISE SERVICES -----------------------------------------------------
+        // - CREAR EMPRESA -------------------------------------------------------------------------------------
 
         public int CreateEnterprise(Enterprises enterprise)
         {
@@ -162,11 +175,14 @@ namespace final_proyect.Services
                 throw;
             }
         }
+
+        // - OBTENER LISTA DE EMPRESAS -------------------------------------------------------------------------
         public List<Enterprises> GetEnterprisesAviables()
         {
             return _context.Enterprises.Where(u => u.Rol == 2 && u.UserState == true).ToList();
         }
 
+        // BORRAR EMPRESA --------------------------------------------------------------------------------------
         public bool DeleteEnterpriseById(int userId)
         {
             try

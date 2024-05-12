@@ -24,7 +24,7 @@ namespace final_proyect.Services
                 _context.SaveChanges();
                 return offer.OfferId;
             }
-            catch (Exception ex)
+            catch 
             {
                 Console.WriteLine("Error al crear la oferta laboral");
                 throw;

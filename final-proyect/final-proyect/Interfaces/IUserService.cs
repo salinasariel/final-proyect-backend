@@ -23,5 +23,6 @@ namespace final_proyect.Interfaces
         public Users? GetUserByEmail(string email);
 
 
+
     }
 }

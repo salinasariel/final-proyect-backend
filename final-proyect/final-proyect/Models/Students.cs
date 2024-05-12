@@ -3,7 +3,7 @@
     public class Students : Users
     {
         public int Dni { get; set; }
-        public int Cuit { get; set; }
+        public long Cuit { get; set; }
         public string PhoneNumber { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
