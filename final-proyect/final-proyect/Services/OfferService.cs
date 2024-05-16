@@ -66,15 +66,41 @@ namespace final_proyect.Services
             return _context.Offers.Where(e => e.EnterpriseId == enterpriseId).ToList();
         }
 
-
-
-
-        /*public void DeleteOffers()
+        public Offers GetOffersById(int offerId)
         {
-            var allOffers = _context.Offers.ToList();
-            _context.Offers.RemoveRange(allOffers);
-            _context.SaveChanges();
-        }*/
+            return _context.Offers.FirstOrDefault(s => s.OfferId == offerId );
+        }
 
-    }
+        public bool ChangeStateOffer(int ofertaId)
+        {
+            var oferta = _context.Offers.FirstOrDefault(o => o.OfferId == ofertaId);
+
+            if (oferta != null) 
+            {
+                oferta.OfferState = !oferta.OfferState;
+                _context.SaveChanges();
+
+                Console.WriteLine($"El estado de la oferta ID:{ofertaId} ahora es{oferta.OfferState}");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"No existe una oferta con la ID:{ofertaId}");
+                return false;
+            }
+   
+        }
+
+
+
+
+
+            /*public void DeleteOffers()
+            {
+                var allOffers = _context.Offers.ToList();
+                _context.Offers.RemoveRange(allOffers);
+                _context.SaveChanges();
+            }*/
+
+        }
 }

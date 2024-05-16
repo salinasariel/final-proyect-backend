@@ -7,7 +7,8 @@ namespace final_proyect.Interfaces
         int CreateOffers(Offers offer);
         List<Offers> GetOffers();
         bool DeleteOfferById(int OfferId);
-
         public List<Offers> GetOffersByEnterprise(int enterpriseId);
+        public Offers GetOffersById(int offerId);
+        public bool ChangeStateOffer(int ofertaId);
     }
 }

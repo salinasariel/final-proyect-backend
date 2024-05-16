@@ -96,7 +96,34 @@ namespace final_proyect.Controllers
          
         }
 
-        
+        [HttpGet("GetOfferById")]
+        public ActionResult<Offers> GetOffersById(int offerId)
+        {
+            var offert = _offerService.GetOffersById(offerId);
+            if (offert == null)
+            {
+                return BadRequest("No existe oferta con esa ID");
+            }
+            return Ok(offert);
+        }
+
+        [HttpPost("ChangeStateOffer")]
+        public IActionResult ChangeStateOffer(int ofertaId)
+        {
+            var result = _offerService.ChangeStateOffer(ofertaId);
+
+            if (result)
+            {
+                return Ok($"El estado de la oferta {ofertaId} ha cambiado exitosamente.");
+            }
+            else
+            {
+                return NotFound($"No existe una oferta con la ID {ofertaId}");
+            }
+        }
+
+
+
 
     }
 }
