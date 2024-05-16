@@ -70,6 +70,32 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpGet("GetOffersByEnterprise")]
+
+        public IActionResult GetOffersByEnterprise(int enterpriseId)
+        {
+            try
+            {
+                var result = _offerService.GetOffersByEnterprise(enterpriseId);
+
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound($"La empresa con ID:{enterpriseId} no posee ninguna oferta.");
+                }
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error al listar las ofertas: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor");
+
+            }
+         
+        }
+
         
 
     }

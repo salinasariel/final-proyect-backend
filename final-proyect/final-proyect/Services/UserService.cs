@@ -63,7 +63,7 @@ namespace final_proyect.Services
         {
             try
             {
-                student.Rol = 3;
+                student.Rol = Models.UsersRoleEnum.Student;
                 _context.Add(student);
                 _context.SaveChanges();
 
@@ -82,13 +82,13 @@ namespace final_proyect.Services
         // - OBTENER LISTA DE ESTUDIANTES ----------------------------------------------
         public List<Students> GetStudents()
                 {
-                    return _context.Students.Where(u => u.Rol == 3).ToList();
+                    return _context.Students.Where(u => u.Rol == Models.UsersRoleEnum.Student).ToList();
                 }
 
 
         public void UpdateStudent(Students student)
         {
-            var existingStudent = _context.Students.FirstOrDefault(s => s.UserId == student.UserId && s.Rol == 3);
+            var existingStudent = _context.Students.FirstOrDefault(s => s.UserId == student.UserId && s.Rol == Models.UsersRoleEnum.Student);
             if (existingStudent != null)
             {
                 existingStudent.Name = student.Name;
@@ -127,7 +127,7 @@ namespace final_proyect.Services
 
         public Students GetStudentById(int userId)
         {
-            return _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
+            return _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == Models.UsersRoleEnum.Student);
         }
 
         // - BORRAR ESTUDIANTE ----------------------------------------------------------
@@ -136,7 +136,7 @@ namespace final_proyect.Services
         {
             try
             {
-                var studentToDelete = _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == 3);
+                var studentToDelete = _context.Students.FirstOrDefault(s => s.UserId == userId && s.Rol == Models.UsersRoleEnum.Student);
 
                 if (studentToDelete != null)
                 {
@@ -164,7 +164,7 @@ namespace final_proyect.Services
             try
             {
                 enterprise.UserState = false;
-                enterprise.Rol = 2;
+                enterprise.Rol = Models.UsersRoleEnum.Enterprise;
                 _context.Add(enterprise);
                 _context.SaveChanges();
                 return enterprise.UserId;
@@ -179,7 +179,7 @@ namespace final_proyect.Services
         // - OBTENER LISTA DE EMPRESAS -------------------------------------------------------------------------
         public List<Enterprises> GetEnterprisesAviables()
         {
-            return _context.Enterprises.Where(u => u.Rol == 2 && u.UserState == true).ToList();
+            return _context.Enterprises.Where(u => u.Rol == Models.UsersRoleEnum.Enterprise && u.UserState == true).ToList();
         }
 
         // BORRAR EMPRESA --------------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ namespace final_proyect.Services
         {
             try
             {
-                var enterpriseToDelete = _context.Enterprises.FirstOrDefault(e => e.UserId == userId && e.Rol == 2);
+                var enterpriseToDelete = _context.Enterprises.FirstOrDefault(e => e.UserId == userId && e.Rol == Models.UsersRoleEnum.Enterprise);
 
                 if (enterpriseToDelete != null)
                 {

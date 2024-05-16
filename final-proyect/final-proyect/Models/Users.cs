@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using final_proyect.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace final_proyect_backend.Models
 {
@@ -11,7 +12,7 @@ namespace final_proyect_backend.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public int Rol { get; set; }
+        public UsersRoleEnum Rol { get; set; }
         public bool UserState { get; set; }
 
 

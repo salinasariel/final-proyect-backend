@@ -60,6 +60,15 @@ namespace final_proyect.Services
             }
         }
 
+
+        public List<Offers> GetOffersByEnterprise(int enterpriseId)
+        {
+            return _context.Offers.Where(e => e.EnterpriseId == enterpriseId).ToList();
+        }
+
+
+
+
         /*public void DeleteOffers()
         {
             var allOffers = _context.Offers.ToList();
