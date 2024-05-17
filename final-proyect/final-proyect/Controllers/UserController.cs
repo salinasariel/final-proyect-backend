@@ -1,5 +1,6 @@
 ﻿using final_proyect.Interfaces;
 using final_proyect.Models.DTO;
+using final_proyect.Services;
 using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,12 +13,15 @@ namespace final_proyect.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly EmailService _emailService;
 
-        public UserController(IUserService userService)
+
+        public UserController(IUserService userService, EmailService emailService)
         {
             _userService = userService;
+            _emailService = emailService;
         }
-
+        
         // ESTUDIANTES
 
         [HttpGet("GetAllStudents")]
@@ -41,6 +45,11 @@ namespace final_proyect.Controllers
             try
             {
                 var studentId = _userService.CreateStudent(student);
+                var subject = "Su registro en la bolsa de trabajo.";
+                var message = $"Hola {student.Name},<br/><br/>Gracias por registrarte en la bolsa de trabajo de la UTN FRRO. <br/><br/>Tu cuenta ha sido registrada con el legajo: {student.FileNumber} y recibirás las noticias a este email. Recuerda que para utilizar esta cuenta primero un administrador debe *autorizar tu acceso*, te avisaremos cuando tu cuenta quede habilitada.";
+                var email = student.Email;
+
+                _emailService.SendEmailAsync(email, subject, message);
                 return Ok($"Estudiande ID:{studentId} creado correctamente ");
             }
             catch (Exception ex)

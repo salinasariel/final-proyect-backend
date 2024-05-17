@@ -1,9 +1,13 @@
 using final_proyect.Data;
 using final_proyect.Interfaces;
+using final_proyect.Models;
 using final_proyect.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+
+using Microsoft.Extensions.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,6 +40,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+
+
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+builder.Services.AddTransient<EmailService>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -43,6 +51,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
 
 app.UseHttpsRedirection();
 
