@@ -5,6 +5,7 @@ using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace final_proyect.Controllers
 {
@@ -45,11 +46,12 @@ namespace final_proyect.Controllers
             try
             {
                 var studentId = _userService.CreateStudent(student);
-                var subject = "Su registro en la bolsa de trabajo.";
-                var message = $"Hola {student.Name},<br/><br/>Gracias por registrarte en la bolsa de trabajo de la UTN FRRO. <br/><br/>Tu cuenta ha sido registrada con el legajo: {student.FileNumber} y recibirás las noticias a este email. Recuerda que para utilizar esta cuenta primero un administrador debe *autorizar tu acceso*, te avisaremos cuando tu cuenta quede habilitada.";
                 var email = student.Email;
+                var name = student.Name;
+                int StudentNumber = student.FileNumber;
+                    
 
-                _emailService.SendEmailAsync(email, subject, message);
+                _emailService.SendInitialEmailStudent(email, name, StudentNumber);
                 return Ok($"Estudiande ID:{studentId} creado correctamente ");
             }
             catch (Exception ex)
