@@ -1,5 +1,6 @@
 ﻿using final_proyect_backend.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace final_proyect.Data
 {
@@ -19,7 +20,7 @@ namespace final_proyect.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
         }
     }
 }

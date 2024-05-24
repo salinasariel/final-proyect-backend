@@ -11,8 +11,8 @@ using final_proyect.Data;
 namespace final_proyect.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240413014055_foreigh2")]
-    partial class foreigh2
+    [Migration("20240524231203_db")]
+    partial class db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace final_proyect.Migrations
 
             modelBuilder.Entity("final_proyect_backend.Models.Applications", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ApplicationID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -34,7 +34,7 @@ namespace final_proyect.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("ApplicationID");
 
                     b.ToTable("Applications");
                 });
@@ -53,9 +53,6 @@ namespace final_proyect.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("CareersInterested")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("EnterpriseId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("FinishDate")
@@ -102,6 +99,9 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("OfferId");
 
                     b.ToTable("Offers");
@@ -118,6 +118,10 @@ namespace final_proyect.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -141,10 +145,6 @@ namespace final_proyect.Migrations
             modelBuilder.Entity("final_proyect_backend.Models.Admins", b =>
                 {
                     b.HasBaseType("final_proyect_backend.Models.Users");
-
-                    b.Property<string>("AdminName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("WorkArea")
                         .IsRequired()
@@ -170,10 +170,6 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("ContactEmail")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -185,6 +181,9 @@ namespace final_proyect.Migrations
                     b.Property<string>("ContactPhone")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<long>("Cuit")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("EmployeesQuantity")
                         .HasColumnType("INTEGER");
@@ -229,7 +228,7 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Cuit")
+                    b.Property<long>("Cuil")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CvFile")
@@ -245,15 +244,8 @@ namespace final_proyect.Migrations
                     b.Property<int>("FileNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("HighSchoolFile")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("InitDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")

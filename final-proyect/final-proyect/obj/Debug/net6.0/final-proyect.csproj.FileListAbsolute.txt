@@ -158,3 +158,9 @@ C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyec
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\System.Formats.Asn1.dll
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\MailKit.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\MimeKit.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

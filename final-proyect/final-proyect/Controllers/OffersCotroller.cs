@@ -17,6 +17,7 @@ namespace final_proyect.Controllers
         {
             _offerService = offerService;
         }
+
         [HttpPost("NewOffer")]
         public ActionResult<int> CreateOffer([FromBody] Offers offer)
         {

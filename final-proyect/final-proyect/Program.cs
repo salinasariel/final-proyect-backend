@@ -16,6 +16,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IOfferService, OfferService>();
 
+builder.Services.AddScoped<IApplicationServices, ApplicationServices>();
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();

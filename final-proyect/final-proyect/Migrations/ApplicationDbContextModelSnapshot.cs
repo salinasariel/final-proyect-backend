@@ -19,7 +19,7 @@ namespace final_proyect.Migrations
 
             modelBuilder.Entity("final_proyect_backend.Models.Applications", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ApplicationID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -32,7 +32,7 @@ namespace final_proyect.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("ApplicationID");
 
                     b.ToTable("Applications");
                 });
@@ -51,9 +51,6 @@ namespace final_proyect.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("CareersInterested")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("EnterpriseId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("FinishDate")
@@ -99,6 +96,9 @@ namespace final_proyect.Migrations
                     b.Property<string>("Tittle")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("OfferId");
 
@@ -180,6 +180,9 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<long>("Cuit")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("EmployeesQuantity")
                         .HasColumnType("INTEGER");
 
@@ -223,7 +226,7 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Cuit")
+                    b.Property<long>("Cuil")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CvFile")

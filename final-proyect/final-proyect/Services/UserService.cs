@@ -176,10 +176,17 @@ namespace final_proyect.Services
             }
         }
 
-        // - OBTENER LISTA DE EMPRESAS -------------------------------------------------------------------------
+        // - OBTENER LISTA DE EMPRESAS HABILITADAS -------------------------------------------------------------------------
         public List<Enterprises> GetEnterprisesAviables()
         {
             return _context.Enterprises.Where(u => u.Rol == Models.UsersRoleEnum.Enterprise && u.UserState == true).ToList();
+        }
+
+        // - OBTENER LISTA DE EMPRESAS -------------------------------------------------------------------------------------
+        
+        public List<Enterprises> GetAllEnterprises() 
+        {
+            return _context.Enterprises.Where( u => u.Rol == Models.UsersRoleEnum.Enterprise ).ToList();
         }
 
         // BORRAR EMPRESA --------------------------------------------------------------------------------------

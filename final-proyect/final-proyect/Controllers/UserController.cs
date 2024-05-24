@@ -139,6 +139,21 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpGet("GetAllEnterprises")]
+        public ActionResult<List<Enterprises>> GetAllEnterprises()
+        {
+            try
+            {
+                var enterprise = _userService.GetAllEnterprises();
+                return Ok(enterprise);
+            }
+            catch
+            {
+                Console.WriteLine($"Error al obtener las empresas");
+                return StatusCode(500);
+            }
+        }
+
         [HttpPost("NewEnterprise")]
         public ActionResult<int> CreateEnterprise([FromBody] Enterprises enterprise)
         {

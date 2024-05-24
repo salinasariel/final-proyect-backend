@@ -12,6 +12,8 @@ namespace final_proyect.Interfaces
         int CreateEnterprise(Enterprises enterprise);
 
         List<Enterprises> GetEnterprisesAviables();
+        public List<Enterprises> GetAllEnterprises();
+
 
         bool DeleteStudentById(int userId);
         bool DeleteEnterpriseById(int userId);
