@@ -9,6 +9,7 @@ namespace final_proyect.Models.Dto
         public string Password { get; set; }
         public string Name { get; set; }
 
+        public string ProfilePhoto { get; set; }
 
 
         public string City { get; set; } // 

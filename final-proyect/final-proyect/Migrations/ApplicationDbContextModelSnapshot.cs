@@ -127,6 +127,10 @@ namespace final_proyect.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ProfilePhoto")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Rol")
                         .HasColumnType("INTEGER");
 

@@ -11,8 +11,8 @@ using final_proyect.Data;
 namespace final_proyect.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240524231203_db")]
-    partial class db
+    [Migration("20240613005335_Picture")]
+    partial class Picture
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -126,6 +126,10 @@ namespace final_proyect.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProfilePhoto")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

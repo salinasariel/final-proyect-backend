@@ -264,8 +264,20 @@ namespace final_proyect.Services
             }
 
         }
+        public bool UpdateProfilePhoto(int userId, UpdateProfilePhotoDto dto)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            if (user == null)
+            {
+                return false;
+            }
 
-       
+            user.ProfilePhoto = dto.ProfilePhoto;
+            _context.SaveChanges();
+
+            return true;
+        }
+
 
     }
 }

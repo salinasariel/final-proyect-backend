@@ -1,4 +1,5 @@
 ﻿using final_proyect.Interfaces;
+using final_proyect.Models;
 using final_proyect.Models.Dto;
 using final_proyect.Models.DTO;
 using final_proyect.Services;
@@ -166,6 +167,7 @@ namespace final_proyect.Controllers
                 enterprise.Email = dto.Email ?? enterprise.Email;
                 enterprise.Password = dto.Password ?? enterprise.Password;
                 enterprise.Name = dto.Name ?? enterprise.Name;
+                enterprise.ProfilePhoto = dto.ProfilePhoto ?? enterprise.ProfilePhoto;
 
                 enterprise.City = dto.City ?? enterprise.City;
                 enterprise.WebPage = dto.WebPage ?? enterprise.WebPage;
@@ -259,8 +261,17 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpPut("{userId}/profilePhoto")]
+        public IActionResult UpdateProfilePhoto(int userId, [FromBody] UpdateProfilePhotoDto dto)
+        {
+            if (!_userService.UpdateProfilePhoto(userId, dto))
+            {
+                return NotFound(new { message = "User not found" });
+            }
 
-        
+            return Ok(new { message = "Profile photo updated successfully" });
+        }
+
 
 
     }

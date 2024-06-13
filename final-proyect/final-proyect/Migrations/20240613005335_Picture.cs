@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace final_proyect.Migrations
 {
-    public partial class db : Migration
+    public partial class Picture : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,6 +64,7 @@ namespace final_proyect.Migrations
                     Password = table.Column<string>(type: "TEXT", nullable: false),
                     Rol = table.Column<int>(type: "INTEGER", nullable: false),
                     UserState = table.Column<bool>(type: "INTEGER", nullable: false),
+                    ProfilePhoto = table.Column<string>(type: "TEXT", nullable: false),
                     Discriminator = table.Column<string>(type: "TEXT", nullable: false),
                     WorkArea = table.Column<string>(type: "TEXT", nullable: true),
                     Enterprises_City = table.Column<string>(type: "TEXT", nullable: true),

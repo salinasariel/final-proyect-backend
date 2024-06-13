@@ -1,4 +1,5 @@
-﻿using final_proyect.Models.Auth;
+﻿using final_proyect.Models;
+using final_proyect.Models.Auth;
 using final_proyect_backend.Models;
 using System.Collections.Generic;
 
@@ -26,7 +27,7 @@ namespace final_proyect.Interfaces
         public LoginResult Login(string mail, string password);
         public Users? GetUserByEmail(string email);
 
-
+        public bool UpdateProfilePhoto(int userId, UpdateProfilePhotoDto dto);
 
     }
 }

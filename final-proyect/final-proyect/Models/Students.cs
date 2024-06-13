@@ -8,8 +8,6 @@ namespace final_proyect_backend.Models
         public int FileNumber { get; set; }
         public int Dni { get; set; }
         public long Cuil { get; set; }
-
-        [Phone]
         public string PhoneNumber { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
