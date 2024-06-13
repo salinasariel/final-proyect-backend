@@ -2,7 +2,7 @@
 
 namespace final_proyect.Models.Dto
 {
-    public class RegisterUserDTO
+    public class RegisterStudentDTO
     {
         [Required]
         [EmailAddress]

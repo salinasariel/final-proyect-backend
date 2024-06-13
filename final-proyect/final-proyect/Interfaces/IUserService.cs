@@ -7,26 +7,27 @@ namespace final_proyect.Interfaces
 {
     public interface IUserService
     {
+        // Student Services
         int CreateStudent(Students student);
         List<Students> GetStudents();
+        public List<Students> GetStudentsTrue();
+        public int ChangeStateStudent(int userId);
+        bool DeleteStudentById(int userId);
+        public void UpdateStudent(Students studentToUpdate);
+        public Students? GetStudentById(int userId);
 
+        // Enterprise Services
         int CreateEnterprise(Enterprises enterprise);
         public int ChangeStateEnterprise(int userId);
-
         List<Enterprises> GetEnterprisesAviables();
         public List<Enterprises> GetAllEnterprises();
         public void UpdateEnterprise(Enterprises enterpriseToUpdate);
         public Enterprises GetEnterpriseById(int userId);
-
-        bool DeleteStudentById(int userId);
         bool DeleteEnterpriseById(int userId);
 
-        public Students? GetStudentById(int userId);
-        public void UpdateStudent(Students student);
-
+        // User Services
         public LoginResult Login(string mail, string password);
         public Users? GetUserByEmail(string email);
-
         public bool UpdateProfilePhoto(int userId, UpdateProfilePhotoDto dto);
 
     }

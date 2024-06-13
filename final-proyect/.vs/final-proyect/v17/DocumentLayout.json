@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\dto\\updateenterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\dto\\updateenterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,71 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "final-proyect\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAADwvwwAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:27:49.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Services\\UserService.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
-              "RelativeToolTip": "final-proyect\\Services\\UserService.cs",
-              "ViewState": "AQIAAMwAAAAAAAAAAAAmwNsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:21:20.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAJsAAAAAAAAAAAAmwJ0AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:57:17.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateEnterpriseDTO.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:11:23.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Enterprises.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Enterprises.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Enterprises.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T22:26:20.108Z",
-              "EditorCaption": ""
             }
           ]
         },

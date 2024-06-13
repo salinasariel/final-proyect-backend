@@ -26,7 +26,7 @@ namespace final_proyect.Controllers
             _emailService = emailService;
         }
         
-        // ESTUDIANTES
+        // ESTUDIANTES // 
 
         [HttpGet("GetAllStudents")]
         public ActionResult<List<Students>> GetStudents()
@@ -43,27 +43,6 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpPost("CreateStudents")]
-        public ActionResult<int> CreateStudent([FromBody] Students student)
-        {
-            try
-            {
-                var studentId = _userService.CreateStudent(student);
-                var email = student.Email;
-                var name = student.Name;
-                int StudentNumber = student.FileNumber;
-                    
-
-                _emailService.SendInitialEmailStudent(email, name, StudentNumber);
-                return Ok($"Estudiande ID:{studentId} creado correctamente ");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al crear estudiante: {ex.Message}");
-                return StatusCode(500, "Error interno del servidor");
-            }
-        }
-
         [HttpGet("GetStudentsById/{userId}")]
         public ActionResult<Students> GetStudentById(int userId)
         {
@@ -75,28 +54,95 @@ namespace final_proyect.Controllers
             return Ok(student);
         }
 
-        [HttpPut("UpdateStudent/{userId}")]
-        public IActionResult UpdateStudent(int userId, Students student)
+        [HttpGet("GetAllStudentsTRUE")]
+        public ActionResult<List<Enterprises>> GetAllStudentsTrue()
         {
-            if (userId != student.UserId)
+            try
             {
-                return BadRequest();
+                var students = _userService.GetStudentsTrue();
+                return Ok(students);
             }
+            catch
+            {
+                Console.WriteLine($"Error al obtener los estudiantes");
+                return StatusCode(500);
+            }
+        }
 
-            var existingStudent = _userService.GetStudentById(userId);
-            if (existingStudent == null)
+        [HttpPost("CreateStudent")]
+        public ActionResult<int> CreateStudent([FromBody] RegisterStudentDTO dto)
+        {
+            Students studentRegister = new Students()
             {
-                return NotFound();
-            }
+                Email = dto.Email,
+                Password = dto.Password,
+                FileNumber = dto.FileNumber,
+                Name = dto.Name,
+                Dni = dto.Dni,
+            };
 
             try
             {
-                _userService.UpdateStudent(student);
-                return NoContent();
+                var studentID = _userService.CreateStudent(studentRegister);
+                return Ok($"Estudiante {dto.Name} | ID: {studentID} | Legajo: {dto.FileNumber}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al actualizar estudiante: {ex.Message}");
+                Console.WriteLine($"Error al crear el estudiante: {ex.Message}");
+                return StatusCode(500);
+            }
+        }
+
+        [HttpPut("ChangeStateStudent/{userId}")]
+        public ActionResult ChangeStateStudent(int userId)
+        {
+            try
+            {
+                int result = _userService.ChangeStateStudent(userId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("UpdateStudent/{userId}")]
+        public ActionResult UpdateStudent(int userId, [FromBody] UpdateStudentDTO dto)
+        {
+            try
+            {
+                var student = _userService.GetStudentById(userId);
+
+                if (student == null)
+                {
+                    throw new Exception("Estudiante no encontrado");
+                }
+                student.Email = dto.Email ?? student.Email;
+                student.Password = dto.Password ?? student.Password;
+                student.Name = dto.Name ?? student.Name;
+
+                student.FileNumber = dto.FileNumber ?? student.FileNumber;
+                student.Dni = dto.Dni ?? student.Dni;
+                student.Cuil = dto.Cuil ?? student.Cuil;
+                student.PhoneNumber = dto.PhoneNumber ?? student.PhoneNumber;
+                student.City = dto.City ?? student.City;
+                student.Address = dto.Address ?? student.Address;
+                student.BirthDate = dto.BirthDate ?? student.BirthDate;
+                student.Sex = dto.Sex ?? student.Sex;
+                student.CivilStatus = dto.CivilStatus ?? student.CivilStatus;
+                student.Tittle = dto.Tittle ?? student.Tittle;
+                student.CareerAge = dto.CareerAge ?? student.CareerAge;
+                student.EnglishLevel = dto.EnglishLevel ?? student.EnglishLevel;
+                student.HighSchoolFile = dto.HighSchoolFile ?? student.HighSchoolFile;
+                student.CoursesFile = dto.CoursesFile ?? student.CoursesFile;
+
+                _userService.UpdateStudent(student);
+                return Ok(student);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al actualizar la empresa: {ex.Message}");
                 return StatusCode(500);
             }
         }
@@ -125,7 +171,37 @@ namespace final_proyect.Controllers
             }
         }
 
-        // EMPRESAS
+        // EMPRESAS //
+
+        [HttpGet("GetAllEnterprises")]
+        public ActionResult<List<Enterprises>> GetAllEnterprises()
+        {
+            try
+            {
+                var enterprise = _userService.GetAllEnterprises();
+                return Ok(enterprise);
+            }
+            catch
+            {
+                Console.WriteLine($"Error al obtener las empresas");
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("GetAllEnterprisesAviables")]
+        public ActionResult<List<Enterprises>> GetEnterprisesAviables()
+        {
+            try
+            {
+                var enterprise = _userService.GetEnterprisesAviables();
+                return Ok(enterprise);
+            }
+            catch
+            {
+                Console.WriteLine($"Error al obtener las empresas");
+                return StatusCode(500);
+            }
+        }
 
         [HttpPost("CreateEnterprise")]
         public ActionResult<int> CreateEnterprise([FromBody] RegisterEnterpriseDTO dto)
@@ -150,8 +226,6 @@ namespace final_proyect.Controllers
                 return StatusCode(500);
             }
         }
-
-        // UPDATE EMPRESA
 
         [HttpPut("UpdateEnterprise/{userId}")]
         public ActionResult UpdateEnterprise(int userId, [FromBody] UpdateEnterpriseDTO dto)
@@ -205,38 +279,6 @@ namespace final_proyect.Controllers
             }
         }
 
-
-
-        [HttpGet("GetAllEnterprisesAviables")]
-        public ActionResult<List<Enterprises>> GetEnterprisesAviables()
-        {
-            try
-            {
-                var enterprise = _userService.GetEnterprisesAviables();
-                return Ok(enterprise);
-            }
-            catch
-            {
-                Console.WriteLine($"Error al obtener las empresas");
-                return StatusCode(500);
-            }
-        }
-
-        [HttpGet("GetAllEnterprises")]
-        public ActionResult<List<Enterprises>> GetAllEnterprises()
-        {
-            try
-            {
-                var enterprise = _userService.GetAllEnterprises();
-                return Ok(enterprise);
-            }
-            catch
-            {
-                Console.WriteLine($"Error al obtener las empresas");
-                return StatusCode(500);
-            }
-        }
-
         [HttpDelete("DeleteEnterprise/{userId}")]
 
         public ActionResult DeleteEnterprise(int userId)
@@ -266,13 +308,11 @@ namespace final_proyect.Controllers
         {
             if (!_userService.UpdateProfilePhoto(userId, dto))
             {
-                return NotFound(new { message = "User not found" });
+                return NotFound(new { message = "Usuario no encontrado" });
             }
 
-            return Ok(new { message = "Profile photo updated successfully" });
+            return Ok(new { message = "Foto de perfil actualizada" });
         }
-
-
 
     }
 }
