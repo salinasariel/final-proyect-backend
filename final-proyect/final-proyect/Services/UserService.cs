@@ -1,5 +1,6 @@
 ﻿using final_proyect.Data;
 using final_proyect.Interfaces;
+using final_proyect.Models;
 using final_proyect.Models.Auth;
 using final_proyect_backend.Models;
 using System;
@@ -176,7 +177,55 @@ namespace final_proyect.Services
             }
         }
 
-        // - OBTENER LISTA DE EMPRESAS HABILITADAS -------------------------------------------------------------------------
+        public Enterprises GetEnterpriseById(int userId)
+        {
+            return _context.Enterprises.FirstOrDefault(s => s.UserId == userId && s.Rol == Models.UsersRoleEnum.Enterprise);
+        }
+
+
+        // - EDITAR EMPRESA -----------------------------------------------------------------------------------------
+
+        public void UpdateEnterprise(Enterprises enterpriseToUpdate)
+        {
+            if (enterpriseToUpdate == null)
+            {
+                throw new Exception("La empresa a actualizar no puede ser null");
+            }
+
+            var enterpriseExist = _context.Enterprises.FirstOrDefault(e => e.UserId == enterpriseToUpdate.UserId && e.Rol == UsersRoleEnum.Enterprise);
+
+            if (enterpriseExist == null)
+            {
+                throw new Exception("Empresa no encontrada");
+            }
+
+            _context.Entry(enterpriseExist).CurrentValues.SetValues(enterpriseToUpdate);
+            _context.SaveChanges();
+        }
+
+        // - DAR DE ALTA EMPRESA -------------------------------------------------------------------------------------
+
+        public int ChangeStateEnterprise(int  userId)
+        {
+           var enterprise = _context.Enterprises.FirstOrDefault(s => s.UserId == userId && s.Rol == Models.UsersRoleEnum.Enterprise);
+
+            if (enterprise == null)
+            {
+                throw new Exception("La empresa a dar de alta no puede ser null");
+            }
+
+            else
+            {
+                enterprise.UserState = !enterprise.UserState;
+            }
+
+            _context.SaveChanges();
+            return (userId);        
+
+        }
+
+
+        // - OBTENER LISTA DE EMPRESAS HABILITADAS -----------------------------------------A--------------------------------
         public List<Enterprises> GetEnterprisesAviables()
         {
             return _context.Enterprises.Where(u => u.Rol == Models.UsersRoleEnum.Enterprise && u.UserState == true).ToList();

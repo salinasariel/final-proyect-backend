@@ -1,8 +1,10 @@
 ﻿using final_proyect.Interfaces;
+using final_proyect.Models.Dto;
 using final_proyect.Models.DTO;
 using final_proyect.Services;
 using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
@@ -124,6 +126,85 @@ namespace final_proyect.Controllers
 
         // EMPRESAS
 
+        [HttpPost("CreateEnterprise")]
+        public ActionResult<int> CreateEnterprise([FromBody] RegisterEnterpriseDTO dto)
+        {
+            Enterprises enterprise = new Enterprises()
+            {
+                Email = dto.Email,
+                Password = dto.Password,
+                City = dto.City,
+                Cuit = dto.Cuit,
+                Name = dto.Name,
+            };
+
+            try
+            {
+                var enterpriseId = _userService.CreateEnterprise(enterprise);
+                return Ok($"Empresa {dto.Name} | ID: {enterpriseId}");
+            }
+            catch
+            {
+                Console.WriteLine($"Error al crear la empresa");
+                return StatusCode(500);
+            }
+        }
+
+        // UPDATE EMPRESA
+
+        [HttpPut("UpdateEnterprise/{userId}")]
+        public ActionResult UpdateEnterprise(int userId, [FromBody] UpdateEnterpriseDTO dto)
+        {
+            try
+            {
+                var enterprise = _userService.GetEnterpriseById(userId);
+
+                if (enterprise == null)
+                {
+                    throw new Exception("Empresa no encontrada");
+                }
+                enterprise.Email = dto.Email ?? enterprise.Email;
+                enterprise.Password = dto.Password ?? enterprise.Password;
+                enterprise.Name = dto.Name ?? enterprise.Name;
+
+                enterprise.City = dto.City ?? enterprise.City;
+                enterprise.WebPage = dto.WebPage ?? enterprise.WebPage;
+                enterprise.AboutCompany = dto.AboutCompany ?? enterprise.AboutCompany;
+                enterprise.LegalAbout = dto.LegalAbout ?? enterprise.LegalAbout;
+                enterprise.CompanyAbout = dto.CompanyAbout ?? enterprise.CompanyAbout;
+                enterprise.ContactName = dto.ContactName ?? enterprise.ContactName;
+                enterprise.ContactEmail = dto.ContactEmail ?? enterprise.ContactEmail;
+                enterprise.ContactPhone = dto.ContactPhone ?? enterprise.ContactPhone;
+                enterprise.EnterpriseType = dto.EnterpriseType ?? enterprise.EnterpriseType;
+                enterprise.EmployeesQuantity = dto.EmployeesQuantity ?? enterprise.EmployeesQuantity;
+                enterprise.Cuit = dto.Cuit ?? enterprise.Cuit;
+                
+                _userService.UpdateEnterprise(enterprise);
+                return Ok(enterprise);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al actualizar la empresa: {ex.Message}");
+                return StatusCode(500);
+            }
+        }
+
+        [HttpPut("ChangeStateEnterprise/{userId}")]
+        public ActionResult ChangeUserState(int userId)
+        {
+            try
+            {
+                int result = _userService.ChangeStateEnterprise(userId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
         [HttpGet("GetAllEnterprisesAviables")]
         public ActionResult<List<Enterprises>> GetEnterprisesAviables()
         {
@@ -150,21 +231,6 @@ namespace final_proyect.Controllers
             catch
             {
                 Console.WriteLine($"Error al obtener las empresas");
-                return StatusCode(500);
-            }
-        }
-
-        [HttpPost("NewEnterprise")]
-        public ActionResult<int> CreateEnterprise([FromBody] Enterprises enterprise)
-        {
-            try
-            {
-                var enterpriseId = _userService.CreateEnterprise(enterprise);
-                return Ok(enterprise);
-            }
-            catch 
-            {
-                Console.WriteLine($"Error al crear la empresa");
                 return StatusCode(500);
             }
         }

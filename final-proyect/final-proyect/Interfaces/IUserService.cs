@@ -10,10 +10,12 @@ namespace final_proyect.Interfaces
         List<Students> GetStudents();
 
         int CreateEnterprise(Enterprises enterprise);
+        public int ChangeStateEnterprise(int userId);
 
         List<Enterprises> GetEnterprisesAviables();
         public List<Enterprises> GetAllEnterprises();
-
+        public void UpdateEnterprise(Enterprises enterpriseToUpdate);
+        public Enterprises GetEnterpriseById(int userId);
 
         bool DeleteStudentById(int userId);
         bool DeleteEnterpriseById(int userId);
