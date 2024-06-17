@@ -13,6 +13,12 @@ namespace final_proyect.Services
             _context = context;
         }
 
+// 1 - Postulado
+// 2 - Visto
+// 3 - En fase final
+// 4 - Descartado
+// 5 - Aplicacion cancelada por el estudiante
+
         public bool ApplyForAnOffer(int studentId, int offerId)
         {
             var student = _context.Students.SingleOrDefault( a => a.UserId == studentId);

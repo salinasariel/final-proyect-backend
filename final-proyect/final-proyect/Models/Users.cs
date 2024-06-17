@@ -23,6 +23,8 @@ namespace final_proyect_backend.Models
         public UsersRoleEnum Rol { get; set; }
         public bool UserState { get; set; }
         public string ProfilePhoto {  get; set; }
+        public string About { get; set; } 
+
 
 
     }

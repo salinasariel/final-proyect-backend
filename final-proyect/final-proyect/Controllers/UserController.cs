@@ -25,7 +25,7 @@ namespace final_proyect.Controllers
             _userService = userService;
             _emailService = emailService;
         }
-        
+
         // ESTUDIANTES // 
 
         [HttpGet("GetAllStudents")]
@@ -43,6 +43,7 @@ namespace final_proyect.Controllers
             }
         }
 
+        
         [HttpGet("GetStudentsById/{userId}")]
         public ActionResult<Students> GetStudentById(int userId)
         {
@@ -52,6 +53,17 @@ namespace final_proyect.Controllers
                 return BadRequest("No existe estudiante con esa ID");
             }
             return Ok(student);
+        }
+
+        [HttpGet("GetEnterpriseById/{userId}")]
+        public ActionResult<Students> GetEnterpriseById(int userId)
+        {
+            var ent = _userService.GetEnterpriseById(userId);
+            if (ent == null)
+            {
+                return BadRequest("No existe empresa con esa ID");
+            }
+            return Ok(ent);
         }
 
         [HttpGet("GetAllStudentsTRUE")]
@@ -121,6 +133,7 @@ namespace final_proyect.Controllers
                 student.Email = dto.Email ?? student.Email;
                 student.Password = dto.Password ?? student.Password;
                 student.Name = dto.Name ?? student.Name;
+                student.About = dto.About ?? student.About;
 
                 student.FileNumber = dto.FileNumber ?? student.FileNumber;
                 student.Dni = dto.Dni ?? student.Dni;
@@ -132,10 +145,9 @@ namespace final_proyect.Controllers
                 student.Sex = dto.Sex ?? student.Sex;
                 student.CivilStatus = dto.CivilStatus ?? student.CivilStatus;
                 student.Tittle = dto.Tittle ?? student.Tittle;
-                student.CareerAge = dto.CareerAge ?? student.CareerAge;
                 student.EnglishLevel = dto.EnglishLevel ?? student.EnglishLevel;
-                student.HighSchoolFile = dto.HighSchoolFile ?? student.HighSchoolFile;
-                student.CoursesFile = dto.CoursesFile ?? student.CoursesFile;
+                student.Education = dto.Education ?? student.Education;
+                student.Experience = dto.Experience ?? student.Experience;
 
                 _userService.UpdateStudent(student);
                 return Ok(student);
@@ -242,16 +254,16 @@ namespace final_proyect.Controllers
                 enterprise.Password = dto.Password ?? enterprise.Password;
                 enterprise.Name = dto.Name ?? enterprise.Name;
                 enterprise.ProfilePhoto = dto.ProfilePhoto ?? enterprise.ProfilePhoto;
+                enterprise.About = dto.About ?? enterprise.About;
 
                 enterprise.City = dto.City ?? enterprise.City;
                 enterprise.WebPage = dto.WebPage ?? enterprise.WebPage;
-                enterprise.AboutCompany = dto.AboutCompany ?? enterprise.AboutCompany;
                 enterprise.LegalAbout = dto.LegalAbout ?? enterprise.LegalAbout;
-                enterprise.CompanyAbout = dto.CompanyAbout ?? enterprise.CompanyAbout;
+ 
                 enterprise.ContactName = dto.ContactName ?? enterprise.ContactName;
                 enterprise.ContactEmail = dto.ContactEmail ?? enterprise.ContactEmail;
                 enterprise.ContactPhone = dto.ContactPhone ?? enterprise.ContactPhone;
-                enterprise.EnterpriseType = dto.EnterpriseType ?? enterprise.EnterpriseType;
+
                 enterprise.EmployeesQuantity = dto.EmployeesQuantity ?? enterprise.EmployeesQuantity;
                 enterprise.Cuit = dto.Cuit ?? enterprise.Cuit;
                 

@@ -22,8 +22,8 @@ namespace final_proyect.Interfaces
         List<Enterprises> GetEnterprisesAviables();
         public List<Enterprises> GetAllEnterprises();
         public void UpdateEnterprise(Enterprises enterpriseToUpdate);
-        public Enterprises GetEnterpriseById(int userId);
         bool DeleteEnterpriseById(int userId);
+        public Enterprises GetEnterpriseById(int userId);
 
         // User Services
         public LoginResult Login(string mail, string password);

@@ -13,7 +13,6 @@ namespace final_proyect_backend.Models
         public int UserId { get; set; }
         public string Tittle { get; set; }
         public string About { get; set; }
-        public DateTime InitDate { get; set; }
         public DateTime PublishedDate { get; set; }
         public DateTime FinishDate { get; set; }
         public string From { get; set; }
@@ -27,18 +26,6 @@ namespace final_proyect_backend.Models
         public int InternTime {  get; set; }
         public bool IsPaid { get; set; }
         public bool OfferState { get; set; }
-
-
-
-       
-
-
-
-
-
-
-
-
 
     }
 }

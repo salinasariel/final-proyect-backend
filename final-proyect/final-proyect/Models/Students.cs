@@ -15,11 +15,14 @@ namespace final_proyect_backend.Models
         public string Sex { get; set; }
         public string CivilStatus { get; set; }
         public string Tittle {  get; set; }
-        public int CareerAge {  get; set; }
+        public string Education {  get; set; }
+        public string Experience { get; set; }
         public int EnglishLevel {get; set; }
-        public string CvFile { get; set; }
-        public string HighSchoolFile { get; set; }
-        public string CoursesFile { get; set; }
+
+
+
+
+
 
 
 
