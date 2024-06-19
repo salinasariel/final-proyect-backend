@@ -49,7 +49,8 @@ namespace final_proyect.Controllers
 
                 var claimsForToken = new List<Claim>();
                 claimsForToken.Add(new Claim("email", user.Email));
-                claimsForToken.Add(new Claim("userid", user.UserId.ToString()));
+                claimsForToken.Add(new Claim("userid", user.UserId.ToString())); 
+                claimsForToken.Add(new Claim("rol", user.Rol.ToString()));
 
 
                 var jwtSecurityToken = new JwtSecurityToken(
