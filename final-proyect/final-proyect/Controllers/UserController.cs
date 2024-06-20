@@ -1,9 +1,11 @@
-﻿using final_proyect.Interfaces;
+﻿using final_proyect.HashData;
+using final_proyect.Interfaces;
 using final_proyect.Models;
 using final_proyect.Models.Dto;
 using final_proyect.Models.DTO;
 using final_proyect.Services;
 using final_proyect_backend.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,12 +20,14 @@ namespace final_proyect.Controllers
     {
         private readonly IUserService _userService;
         private readonly EmailService _emailService;
+        private readonly IHashData _hashData;
 
 
-        public UserController(IUserService userService, EmailService emailService)
+        public UserController(IUserService userService, EmailService emailService, IHashData hashData)
         {
             _userService = userService;
             _emailService = emailService;
+            _hashData = hashData;
         }
 
         // ESTUDIANTES // 
@@ -55,6 +59,17 @@ namespace final_proyect.Controllers
             return Ok(student);
         }
 
+        [HttpGet("GetByEmail")]
+        public IActionResult GetStudentByEmail(string email) 
+        {
+            var user = _userService.GetUserByEmail(email);
+            if (user == null)
+            {
+                return BadRequest();
+            }
+            return Ok(user);
+        }
+
         [HttpGet("GetEnterpriseById/{userId}")]
         public ActionResult<Students> GetEnterpriseById(int userId)
         {
@@ -81,22 +96,24 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpPost("CreateStudent")]
+        [HttpPost("register_student")]
         public ActionResult<int> CreateStudent([FromBody] RegisterStudentDTO dto)
         {
+            var passwordHash = _hashData.DataHasher(dto.Password);
+
             Students studentRegister = new Students()
             {
                 Email = dto.Email,
-                Password = dto.Password,
+                PasswordHash = passwordHash,
                 FileNumber = dto.FileNumber,
                 Name = dto.Name,
                 Dni = dto.Dni,
-            };
+          };
 
             try
             {
                 var studentID = _userService.CreateStudent(studentRegister);
-                return Ok($"Estudiante {dto.Name} | ID: {studentID} | Legajo: {dto.FileNumber}");
+                return Ok($"Estudiante {dto.Name} | Legajo: {dto.FileNumber}");
             }
             catch (Exception ex)
             {
@@ -131,7 +148,7 @@ namespace final_proyect.Controllers
                     throw new Exception("Estudiante no encontrado");
                 }
                 student.Email = dto.Email ?? student.Email;
-                student.Password = dto.Password ?? student.Password;
+                student.PasswordHash = dto.Password ?? student.PasswordHash;
                 student.Name = dto.Name ?? student.Name;
                 student.About = dto.About ?? student.About;
 
@@ -221,7 +238,7 @@ namespace final_proyect.Controllers
             Enterprises enterprise = new Enterprises()
             {
                 Email = dto.Email,
-                Password = dto.Password,
+                PasswordHash = dto.Password,
                 City = dto.City,
                 Cuit = dto.Cuit,
                 Name = dto.Name,
@@ -251,7 +268,7 @@ namespace final_proyect.Controllers
                     throw new Exception("Empresa no encontrada");
                 }
                 enterprise.Email = dto.Email ?? enterprise.Email;
-                enterprise.Password = dto.Password ?? enterprise.Password;
+                enterprise.PasswordHash = dto.Password ?? enterprise.PasswordHash;
                 enterprise.Name = dto.Name ?? enterprise.Name;
                 enterprise.ProfilePhoto = dto.ProfilePhoto ?? enterprise.ProfilePhoto;
                 enterprise.About = dto.About ?? enterprise.About;

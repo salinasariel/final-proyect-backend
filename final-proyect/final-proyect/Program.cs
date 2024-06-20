@@ -9,17 +9,17 @@ using Microsoft.IdentityModel.Tokens;
 
 using Microsoft.Extensions.Configuration;
 using System.Text;
+using final_proyect.HashData;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUserService, UserService>();
-
 builder.Services.AddScoped<IOfferService, OfferService>();
-
+builder.Services.AddScoped<IHashData, HashData>();
 builder.Services.AddScoped<IApplicationServices, ApplicationServices>();
+builder.Services.AddScoped<IAuthServices, AuthServices>();
 
 builder.Services.AddControllers();
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

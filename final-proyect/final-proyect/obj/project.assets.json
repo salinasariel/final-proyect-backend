@@ -15,6 +15,19 @@
           }
         }
       },
+      "FluentValidation/11.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1058,6 +1071,31 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "FluentValidation/11.9.2": {
+      "sha512": "XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "type": "package",
+      "path": "fluentvalidation/11.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.9.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -2665,6 +2703,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "FluentValidation >= 11.9.2",
       "MailKit >= 4.5.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.28",
@@ -2678,19 +2717,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ariel\\.nuget\\packages\\": {}
+    "C:\\Users\\Mathy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+      "projectUniqueName": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
       "projectName": "final-proyect",
-      "projectPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
-      "packagesPath": "C:\\Users\\Ariel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
+      "projectPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+      "packagesPath": "C:\\Users\\Mathy\\.nuget\\packages\\",
+      "outputPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2710,12 +2749,21 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.9.2, )"
+          },
           "MailKit": {
             "target": "Package",
             "version": "[4.5.0, )"
@@ -2780,7 +2828,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2789,7 +2837,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json' 6.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "message": "El paquete \"Newtonsoft.Json\" 6.0.8 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -2799,7 +2847,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json 6.0.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Newtonsoft.Json 6.0.8\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"

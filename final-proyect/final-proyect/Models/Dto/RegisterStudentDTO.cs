@@ -20,7 +20,7 @@ namespace final_proyect.Models.Dto
         [Required]
         public int Dni {  get; set; }
 
-        // --------------------------------------------------
+
         public UsersRoleEnum Rol {  get; set; } = UsersRoleEnum.Student;
 
         public bool UserState {  get; set; } = false;

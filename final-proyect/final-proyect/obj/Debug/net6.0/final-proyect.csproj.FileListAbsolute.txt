@@ -164,3 +164,4 @@ C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyec
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\obj\Debug\net6.0\final-proyect.pdb
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\obj\Debug\net6.0\final-proyect.genruntimeconfig.cache
 C:\Users\Ariel\Documents\GitHub\final-proyect-backend\final-proyect\final-proyect\obj\Debug\net6.0\ref\final-proyect.dll
+D:\Proyectos\final-proyect-backend\final-proyect\final-proyect\bin\Debug\net6.0\FluentValidation.dll

@@ -13,45 +13,44 @@ using System.Text;
 namespace final_proyect.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     [ApiController]
-    public class AuthController : Controller
+    public class AuthController : ControllerBase
     {
         private readonly IConfiguration _config;
         private readonly IUserService _userService;
+        private readonly IAuthServices _authService;
 
-        public AuthController(IConfiguration config, IUserService userService) 
+        public AuthController(IConfiguration config, IUserService userService, IAuthServices authService) 
         {
             _config = config;
             _userService = userService;
+            _authService = authService;
         }
 
-        [HttpPost("Login")]
-        public IActionResult Login([FromBody] CredentialsDTO credentials)
+        [HttpPost("/login")]
+        public IActionResult Login([FromBody] CredentialsDTO dto)
         {
-            LoginResult loginResult = _userService.Login(credentials.Mail, credentials.Password);
-
-            if (loginResult.Message == "mail incorrecto")
+            LoginResult loginResult = _authService.Login(dto);
+            if (loginResult.Message == "Email incorrecto")
             {
-                return BadRequest(loginResult.Message);
+                return NotFound ("Email incorrecto");
             }
-            else if (loginResult.Message == "password incorrecto")
+            else if (loginResult.Message == "Contraseña incorrecta")
             {
-                return BadRequest(loginResult.Message);
+                return Unauthorized("Contraseña incorrecta");
             }
 
             if (loginResult.Success)
             {
-                Users user = _userService.GetUserByEmail(credentials.Mail);
+                var user = _userService.GetUserByEmail(dto.Mail);
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Authentication:SecretForKey"]));
-
-
+                
                 var claimsForToken = new List<Claim>();
                 claimsForToken.Add(new Claim("email", user.Email));
-                claimsForToken.Add(new Claim("userid", user.UserId.ToString())); 
+                claimsForToken.Add(new Claim("userid", user.UserId.ToString()));
                 claimsForToken.Add(new Claim("rol", user.Rol.ToString()));
-
 
                 var jwtSecurityToken = new JwtSecurityToken(
                    _config["Authentication:Issuer"],
@@ -62,10 +61,49 @@ namespace final_proyect.Controllers
                 string tokenToReturn = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                 return Ok(tokenToReturn);
             }
-            else { return BadRequest(); }
+            else 
+            {
+                return BadRequest();
+            }
 
+        }
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         }
        
      
     }
-}
+

@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\validators\\uservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\dto\\registerstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\dto\\registerstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\dto\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\dto\\updatestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\dto\\updateenterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\dto\\updateenterprisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\offerscotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\offerscotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\offers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\offers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\enterprises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 322,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,139 +54,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Students.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Students.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Students.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Students.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Students.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:04:41.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Services\\UserService.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
-              "RelativeToolTip": "final-proyect\\Services\\UserService.cs",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAgwLAAAAARAAAA",
+              "Title": "StudentServices.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\StudentServices.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Services\\StudentServices.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\StudentServices.cs",
+              "RelativeToolTip": "final-proyect\\Services\\StudentServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T00:56:27.256Z",
+              "WhenOpened": "2024-06-20T08:19:01.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAIwFwAAAAeAAAA",
+              "DocumentIndex": 4,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Models\\Users.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Users.cs",
+              "RelativeToolTip": "final-proyect\\Models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:06:24.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateEnterpriseDTO.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Dto\\UpdateEnterpriseDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:00:58.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Offers.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Offers.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Offers.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Offers.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Offers.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:15:17.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OffersCotroller.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
-              "RelativeToolTip": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:16:09.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Enterprises.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Enterprises.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Enterprises.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Enterprises.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:00:51.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OfferService.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Services\\OfferService.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
-              "RelativeToolTip": "final-proyect\\Services\\OfferService.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T01:58:00.125Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 78,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterStudentDTO.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:01:08.191Z",
+              "WhenOpened": "2024-06-20T08:17:12.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UpdateStudentDTO.cs",
-              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateStudentDTO.cs",
-              "RelativeDocumentMoniker": "final-proyect\\Models\\Dto\\UpdateStudentDTO.cs",
-              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\UpdateStudentDTO.cs",
-              "RelativeToolTip": "final-proyect\\Models\\Dto\\UpdateStudentDTO.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBcAAAAAAAAA",
+              "Title": "RegisterStudentDTO.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
+              "RelativeToolTip": "final-proyect\\Models\\Dto\\RegisterStudentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:01:12.721Z",
+              "WhenOpened": "2024-06-20T08:16:26.539Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserValidator.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Validators\\UserValidator.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Validators\\UserValidator.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Validators\\UserValidator.cs",
+              "RelativeToolTip": "final-proyect\\Validators\\UserValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T07:58:26.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Services\\UserService.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\UserService.cs",
+              "RelativeToolTip": "final-proyect\\Services\\UserService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAIAwwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T07:50:19.496Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 78,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             }
           ]
         }

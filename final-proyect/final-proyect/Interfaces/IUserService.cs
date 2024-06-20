@@ -26,7 +26,6 @@ namespace final_proyect.Interfaces
         public Enterprises GetEnterpriseById(int userId);
 
         // User Services
-        public LoginResult Login(string mail, string password);
         public Users? GetUserByEmail(string email);
         public bool UpdateProfilePhoto(int userId, UpdateProfilePhotoDto dto);
 

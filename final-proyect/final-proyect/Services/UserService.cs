@@ -23,43 +23,6 @@ namespace final_proyect.Services
         {
             _context = context;
         }
-
-        // - INICIAR SESION ---------------------------------------------------------------------------
-       
-        public LoginResult Login(string mail, string password)
-        {
-            LoginResult result = new LoginResult();
-
-            Users? usersLogin = _context.Users.SingleOrDefault(u => u.Email == mail);
-
-            if (usersLogin == null)
-            {
-                throw new ArgumentNullException("mail o password no pueden ser nulos.");
-            }
-
-            else if (usersLogin != null)
-            {
-                if (usersLogin.Password == password)
-                {
-                    result.Success = true;
-                    result.Message = "Login OK";
-                }
-                else
-                {
-                    result.Success = false;
-                    result.Message = "password incorrecto";
-                }
-            }
-            else
-            {
-                result.Success = false;
-                result.Message = "mail incorrecto";
-            }
-
-            return result;
-        }
-
-        // - REGISTRO ESTUDIANTE -----------------------------------------------------------
         public int CreateStudent(Students student)
         {
             try
@@ -82,7 +45,6 @@ namespace final_proyect.Services
             }
         }
 
-        // - DAR DE ALTA ESTUDIANTE -------------------------------------------------------------------------------------
 
         public int ChangeStateStudent(int userId)
         {
@@ -104,13 +66,12 @@ namespace final_proyect.Services
         }
 
 
-        // - OBTENER LISTA DE ESTUDIANTES ----------------------------------------------
         public List<Students> GetStudents()
                 {
                     return _context.Students.Where(u => u.Rol == Models.UsersRoleEnum.Student).ToList();
                 }
 
-        // - Obtener Lista de estudiantes TRUE -----------------------------------------
+
 
         public List<Students> GetStudentsTrue()
         {
@@ -118,7 +79,7 @@ namespace final_proyect.Services
         }
 
 
-        // EDITAR ESTUDIANTE
+
         public void UpdateStudent(Students studentToUpdate)
         {
             if (studentToUpdate == null)
@@ -138,14 +99,10 @@ namespace final_proyect.Services
         }
 
 
-        // - OBTENER ESTUDIANTE POR MAIL ------------------------------------------------
-
         public Users? GetUserByEmail(string email)
         {
             return _context.Users.SingleOrDefault(u => u.Email == email);
         }
-
-        // - OBTENER ESTUDIANTE POR ID -------------------------------------------------
 
         public Students GetStudentById(int userId)
         {
@@ -157,7 +114,6 @@ namespace final_proyect.Services
             return _context.Enterprises.FirstOrDefault(s => s.UserId == userId && s.Rol == Models.UsersRoleEnum.Enterprise);
         }
 
-        // - BORRAR ESTUDIANTE ----------------------------------------------------------
 
         public bool DeleteStudentById(int userId)
         {
@@ -184,7 +140,6 @@ namespace final_proyect.Services
             }
         }
 
-        // - CREAR EMPRESA -------------------------------------------------------------------------------------
 
         public int CreateEnterprise(Enterprises enterprise)
         {
@@ -206,8 +161,6 @@ namespace final_proyect.Services
         }
 
 
-        // - EDITAR EMPRESA -----------------------------------------------------------------------------------------
-
         public void UpdateEnterprise(Enterprises enterpriseToUpdate)
         {
             if (enterpriseToUpdate == null)
@@ -225,8 +178,6 @@ namespace final_proyect.Services
             _context.Entry(enterpriseExist).CurrentValues.SetValues(enterpriseToUpdate);
             _context.SaveChanges();
         }
-
-        // - DAR DE ALTA EMPRESA -------------------------------------------------------------------------------------
 
         public int ChangeStateEnterprise(int  userId)
         {
@@ -248,20 +199,18 @@ namespace final_proyect.Services
         }
 
 
-        // - OBTENER LISTA DE EMPRESAS HABILITADAS -----------------------------------------A--------------------------------
         public List<Enterprises> GetEnterprisesAviables()
         {
             return _context.Enterprises.Where(u => u.Rol == Models.UsersRoleEnum.Enterprise && u.UserState == true).ToList();
         }
 
-        // - OBTENER LISTA DE EMPRESAS -------------------------------------------------------------------------------------
+
         
         public List<Enterprises> GetAllEnterprises() 
         {
             return _context.Enterprises.Where( u => u.Rol == Models.UsersRoleEnum.Enterprise ).ToList();
         }
 
-        // BORRAR EMPRESA --------------------------------------------------------------------------------------
         public bool DeleteEnterpriseById(int userId)
         {
             try
