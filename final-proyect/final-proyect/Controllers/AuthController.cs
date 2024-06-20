@@ -13,7 +13,7 @@ using System.Text;
 namespace final_proyect.Controllers
 {
 
-    [Route("/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -28,7 +28,7 @@ namespace final_proyect.Controllers
             _authService = authService;
         }
 
-        [HttpPost("/login")]
+        [HttpPost("login")]
         public IActionResult Login([FromBody] CredentialsDTO dto)
         {
             LoginResult loginResult = _authService.Login(dto);

@@ -2717,19 +2717,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mathy\\.nuget\\packages\\": {}
+    "C:\\Users\\Ariel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+      "projectUniqueName": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
       "projectName": "final-proyect",
-      "projectPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
-      "packagesPath": "C:\\Users\\Mathy\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
+      "projectPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+      "packagesPath": "C:\\Users\\Ariel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mathy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2749,11 +2749,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2828,7 +2823,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2837,7 +2832,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Newtonsoft.Json\" 6.0.8 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "message": "Package 'Newtonsoft.Json' 6.0.8 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -2847,7 +2842,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Newtonsoft.Json 6.0.8\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Newtonsoft.Json 6.0.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
