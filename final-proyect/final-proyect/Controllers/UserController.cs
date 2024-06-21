@@ -141,6 +141,7 @@ namespace final_proyect.Controllers
         {
             try
             {
+                var passwordHash = _hashData.DataHasher(dto.Password);
                 var student = _userService.GetStudentById(userId);
 
                 if (student == null)
@@ -148,7 +149,7 @@ namespace final_proyect.Controllers
                     throw new Exception("Estudiante no encontrado");
                 }
                 student.Email = dto.Email ?? student.Email;
-                student.PasswordHash = dto.Password ?? student.PasswordHash;
+                student.PasswordHash = passwordHash ?? student.PasswordHash;
                 student.Name = dto.Name ?? student.Name;
                 student.About = dto.About ?? student.About;
 
@@ -235,10 +236,13 @@ namespace final_proyect.Controllers
         [HttpPost("CreateEnterprise")]
         public ActionResult<int> CreateEnterprise([FromBody] RegisterEnterpriseDTO dto)
         {
+
+            var passwordHash = _hashData.DataHasher(dto.Password);
+
             Enterprises enterprise = new Enterprises()
             {
                 Email = dto.Email,
-                PasswordHash = dto.Password,
+                PasswordHash = passwordHash,
                 City = dto.City,
                 Cuit = dto.Cuit,
                 Name = dto.Name,
@@ -261,6 +265,7 @@ namespace final_proyect.Controllers
         {
             try
             {
+                var passwordHashdto = _hashData.DataHasher(dto.Password);
                 var enterprise = _userService.GetEnterpriseById(userId);
 
                 if (enterprise == null)
@@ -268,22 +273,18 @@ namespace final_proyect.Controllers
                     throw new Exception("Empresa no encontrada");
                 }
                 enterprise.Email = dto.Email ?? enterprise.Email;
-                enterprise.PasswordHash = dto.Password ?? enterprise.PasswordHash;
+                enterprise.PasswordHash = passwordHashdto ?? enterprise.PasswordHash;
                 enterprise.Name = dto.Name ?? enterprise.Name;
-                enterprise.ProfilePhoto = dto.ProfilePhoto ?? enterprise.ProfilePhoto;
                 enterprise.About = dto.About ?? enterprise.About;
-
                 enterprise.City = dto.City ?? enterprise.City;
                 enterprise.WebPage = dto.WebPage ?? enterprise.WebPage;
                 enterprise.LegalAbout = dto.LegalAbout ?? enterprise.LegalAbout;
- 
                 enterprise.ContactName = dto.ContactName ?? enterprise.ContactName;
                 enterprise.ContactEmail = dto.ContactEmail ?? enterprise.ContactEmail;
                 enterprise.ContactPhone = dto.ContactPhone ?? enterprise.ContactPhone;
-
                 enterprise.EmployeesQuantity = dto.EmployeesQuantity ?? enterprise.EmployeesQuantity;
                 enterprise.Cuit = dto.Cuit ?? enterprise.Cuit;
-                
+                 
                 _userService.UpdateEnterprise(enterprise);
                 return Ok(enterprise);
             }
@@ -293,6 +294,7 @@ namespace final_proyect.Controllers
                 return StatusCode(500);
             }
         }
+
 
         [HttpPut("ChangeStateEnterprise/{userId}")]
         public ActionResult ChangeUserState(int userId)

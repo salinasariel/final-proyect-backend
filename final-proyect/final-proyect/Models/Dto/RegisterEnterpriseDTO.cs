@@ -20,7 +20,6 @@ namespace final_proyect.Models.Dto
         [Required]
         public string City { get; set; }
 
-        // --------------------------------------------------
         public UsersRoleEnum Rol { get; set; } = UsersRoleEnum.Enterprise;
 
         public bool UserState { get; set; } = false;
