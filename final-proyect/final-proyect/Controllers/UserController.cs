@@ -141,15 +141,13 @@ namespace final_proyect.Controllers
         {
             try
             {
-                var passwordHash = _hashData.DataHasher(dto.Password);
                 var student = _userService.GetStudentById(userId);
 
                 if (student == null)
                 {
                     throw new Exception("Estudiante no encontrado");
                 }
-                student.Email = dto.Email ?? student.Email;
-                student.PasswordHash = passwordHash ?? student.PasswordHash;
+
                 student.Name = dto.Name ?? student.Name;
                 student.About = dto.About ?? student.About;
 
