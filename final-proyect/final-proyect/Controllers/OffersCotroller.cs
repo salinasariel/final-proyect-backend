@@ -1,6 +1,7 @@
 ﻿using final_proyect.Interfaces;
 using final_proyect.Services;
 using final_proyect_backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,7 @@ namespace final_proyect.Controllers
             _offerService = offerService;
         }
 
+        [Authorize(Policy = "Enterprise")]
         [HttpPost("NewOffer")]
         public ActionResult<int> CreateOffer([FromBody] Offers offer)
         {
@@ -32,6 +34,7 @@ namespace final_proyect.Controllers
                 return StatusCode(500);
             }
         }
+
 
         [HttpGet("GetAllOffers")]
         public ActionResult<List<Students>> GetStudents()
@@ -48,6 +51,14 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult<IEnumerable<object>> GetAllOffers()
+        {
+            var offers = _offerService.GetAllOffersAndEnterprises();
+            return Ok(offers);
+        }
+
+        [Authorize(Policy = "AdminOrEnterprise")]
         [HttpDelete("DeleteOffer/{OfferId}")]
         public IActionResult DeleteOffer(int OfferId)
         {
@@ -70,6 +81,8 @@ namespace final_proyect.Controllers
                 return StatusCode(500, "Error interno del servidor");
             }
         }
+
+
 
         [HttpGet("GetOffersByEnterprise")]
 
@@ -97,6 +110,7 @@ namespace final_proyect.Controllers
          
         }
 
+
         [HttpGet("GetOfferById")]
         public ActionResult<Offers> GetOffersById(int offerId)
         {
@@ -108,6 +122,8 @@ namespace final_proyect.Controllers
             return Ok(offert);
         }
 
+
+        [Authorize(Policy = "Admin")]
         [HttpPost("ChangeStateOffer")]
         public IActionResult ChangeStateOffer(int ofertaId)
         {

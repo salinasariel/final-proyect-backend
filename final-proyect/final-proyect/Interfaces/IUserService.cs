@@ -25,9 +25,15 @@ namespace final_proyect.Interfaces
         bool DeleteEnterpriseById(int userId);
         public Enterprises GetEnterpriseById(int userId);
 
+        public void NotifyEnterprise(Enterprises enterprise, Offers offer, Students student);
+
         // User Services
         public Users? GetUserByEmail(string email);
         public bool UpdateProfilePhoto(int userId, UpdateProfilePhotoDto dto);
+
+        // Admin Services
+
+        public int CreateAdmin(Admins admin);
 
     }
 }

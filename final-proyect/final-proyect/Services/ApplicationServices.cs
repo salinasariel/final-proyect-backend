@@ -1,5 +1,6 @@
 ﻿using final_proyect.Data;
 using final_proyect.Interfaces;
+using final_proyect.Observer;
 using final_proyect_backend.Models;
 
 namespace final_proyect.Services
@@ -7,10 +8,12 @@ namespace final_proyect.Services
     public class ApplicationServices : IApplicationServices
     {
         private readonly ApplicationDbContext _context;
+        private readonly OfferSubject _offerSubject;
 
-        public ApplicationServices(ApplicationDbContext context)
+        public ApplicationServices(ApplicationDbContext context, OfferSubject offerSubject)
         {
             _context = context;
+            _offerSubject = offerSubject;
         }
 
 // 1 - Postulado
@@ -41,6 +44,7 @@ namespace final_proyect.Services
 
                 _context.Applications.Add(application);
                 _context.SaveChanges();
+                _offerSubject.Notify(offer, student);
 
                 return true;
             }

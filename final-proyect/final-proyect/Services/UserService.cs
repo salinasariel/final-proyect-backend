@@ -23,6 +23,34 @@ namespace final_proyect.Services
         {
             _context = context;
         }
+
+        public void NotifyEnterprise(Enterprises enterprise, Offers offer, Students student)
+        {
+            // Lógica para notificar a la empresa
+            Console.WriteLine($"Enterprise {enterprise.Name} notified about student {student.Name} applying to offer {offer.Tittle}");
+            // Aquí podrías enviar un email, una notificación push, etc.
+        }
+
+        public int CreateAdmin(Admins admin)
+        {
+            try
+            {
+                admin.UserState = true;
+                admin.WorkArea = "UTN";
+                admin.ProfilePhoto = "-";
+                admin.Rol = Models.UsersRoleEnum.Admin;
+                _context.Add(admin);
+                _context.SaveChanges();
+
+                return admin.UserId;
+            }
+            catch  
+            {
+                throw;
+            }
+        }
+
+
         public int CreateStudent(Students student)
         {
             try

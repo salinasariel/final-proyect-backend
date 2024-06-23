@@ -1,4 +1,5 @@
-﻿using final_proyect_backend.Models;
+﻿using final_proyect.Models;
+using final_proyect_backend.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -20,7 +21,7 @@ namespace final_proyect.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+           
         }
     }
 }

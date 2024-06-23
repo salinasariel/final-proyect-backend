@@ -5,6 +5,7 @@ using final_proyect.Models.Dto;
 using final_proyect.Models.DTO;
 using final_proyect.Services;
 using final_proyect_backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -30,9 +31,9 @@ namespace final_proyect.Controllers
             _hashData = hashData;
         }
 
-        // ESTUDIANTES // 
-
+        
         [HttpGet("GetAllStudents")]
+        [Authorize(Policy = "Admin")]
         public ActionResult<List<Students>> GetStudents()
         {
             try
@@ -42,7 +43,7 @@ namespace final_proyect.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error al obtener estudiantes");
+                Console.WriteLine($"Error al obtener estudiantes: {ex.Message}");
                 return StatusCode(500);
             }
         }
@@ -96,6 +97,32 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpPost("createAdmin")]
+        [Authorize(Policy = "Admin")]
+        public ActionResult<int> CreateAdmin([FromBody] CreateAdminDTO dto)
+        {
+            var passwordHash = _hashData.DataHasher(dto.PasswordHash);
+
+            Admins admin = new Admins()
+            {
+                Email = dto.Email,
+                Name = dto.Name,
+                About = dto.About,
+                PasswordHash = passwordHash,
+            };
+
+            try
+            {
+                var idAdmin = _userService.CreateAdmin(admin);
+                return Ok(admin.UserId);
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+                return StatusCode(500);
+            }
+        }
+
         [HttpPost("register_student")]
         public ActionResult<int> CreateStudent([FromBody] RegisterStudentDTO dto)
         {
@@ -123,6 +150,7 @@ namespace final_proyect.Controllers
         }
 
         [HttpPut("ChangeStateStudent/{userId}")]
+        [Authorize(Policy = "Admin")]
         public ActionResult ChangeStateStudent(int userId)
         {
             try
@@ -136,7 +164,9 @@ namespace final_proyect.Controllers
             }
         }
 
+        
         [HttpPut("UpdateStudent/{userId}")]
+        [Authorize(Policy = "Student")]
         public ActionResult UpdateStudent(int userId, [FromBody] UpdateStudentDTO dto)
         {
             try
@@ -176,6 +206,7 @@ namespace final_proyect.Controllers
         }
 
         [HttpDelete("DeleteStudent/{userId}")]
+        [Authorize(Policy = "Admin")]
 
         public ActionResult DeleteStudent(int userId)
         {
@@ -199,9 +230,9 @@ namespace final_proyect.Controllers
             }
         }
 
-        // EMPRESAS //
 
         [HttpGet("GetAllEnterprises")]
+        [Authorize(Policy = "Admin")]
         public ActionResult<List<Enterprises>> GetAllEnterprises()
         {
             try
@@ -217,6 +248,7 @@ namespace final_proyect.Controllers
         }
 
         [HttpGet("GetAllEnterprisesAviables")]
+        [Authorize(Policy = "Admin")]
         public ActionResult<List<Enterprises>> GetEnterprisesAviables()
         {
             try
@@ -259,6 +291,7 @@ namespace final_proyect.Controllers
         }
 
         [HttpPut("UpdateEnterprise/{userId}")]
+        [Authorize(Policy = "Enterprise")]
         public ActionResult UpdateEnterprise(int userId, [FromBody] UpdateEnterpriseDTO dto)
         {
             try
@@ -295,6 +328,7 @@ namespace final_proyect.Controllers
 
 
         [HttpPut("ChangeStateEnterprise/{userId}")]
+        [Authorize(Policy = "Admin")]
         public ActionResult ChangeUserState(int userId)
         {
             try
@@ -309,6 +343,7 @@ namespace final_proyect.Controllers
         }
 
         [HttpDelete("DeleteEnterprise/{userId}")]
+        [Authorize(Policy = "Admin")]
 
         public ActionResult DeleteEnterprise(int userId)
         {

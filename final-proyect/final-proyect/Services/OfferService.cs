@@ -1,5 +1,6 @@
 ﻿using final_proyect.Data;
 using final_proyect.Interfaces;
+using final_proyect.Observer;
 using final_proyect_backend.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,10 +11,15 @@ namespace final_proyect.Services
     {
 
         private readonly ApplicationDbContext _context;
+        private readonly IUserService _userService;
 
-        public OfferService(ApplicationDbContext context)
+
+        public OfferService(ApplicationDbContext context, IUserService userService)
         {
             _context = context;
+            _userService = userService;
+
+
         }
         public int CreateOffers(Offers offer)
         {
@@ -34,6 +40,43 @@ namespace final_proyect.Services
         {
             return _context.Offers.Where(u => u.OfferState == true).ToList();
         }
+
+
+        public IEnumerable<object> GetAllOffersAndEnterprises()
+        {
+            var offers = _context.Offers.ToList();
+            var offersWithEnterprises = new List<object>();
+
+            foreach (var offer in offers)
+            {
+                var enterprise = _userService.GetEnterpriseById(offer.UserId);
+                var offerWithEnterprise = new
+                {
+                    offer.OfferId,
+                    offer.Tittle,
+                    offer.About,
+                    offer.PublishedDate,
+                    offer.FinishDate,
+                    offer.From,
+                    offer.Location,
+                    offer.Sector,
+                    offer.SkillsRequired,
+                    offer.InmediteIncorporation,
+                    offer.Intern,
+                    offer.CareerMinimumAge,
+                    offer.CareersInterested,
+                    offer.InternTime,
+                    offer.IsPaid,
+                    offer.OfferState,
+                    Enterprise = enterprise
+                };
+                offersWithEnterprises.Add(offerWithEnterprise);
+            }
+
+            return offersWithEnterprises;
+        }
+
+
 
         public bool DeleteOfferById(int OfferId)
         {

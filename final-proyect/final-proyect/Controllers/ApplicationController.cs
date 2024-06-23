@@ -1,6 +1,7 @@
 ﻿using final_proyect.Interfaces;
 using final_proyect.Services;
 using final_proyect_backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace final_proyect.Controllers
             _services = services;
         }
 
+        [Authorize(Policy = "Student")]
         [HttpPost("ApplyForAnOffer")]
         public IActionResult ApplyForAnOffer([FromBody] Applications application)
         {
@@ -49,6 +51,7 @@ namespace final_proyect.Controllers
             }
         }
 
+        [Authorize(Policy = "Student")]
         [HttpGet("GetApplicationsByStudentID")]
         public ActionResult <List<Applications>> GetApplicationsByStudentID(int studentId)
         {
@@ -63,6 +66,7 @@ namespace final_proyect.Controllers
                 return BadRequest();
             }
         }
+
 
 
         [HttpGet("GetApplicationsByOfferID")]

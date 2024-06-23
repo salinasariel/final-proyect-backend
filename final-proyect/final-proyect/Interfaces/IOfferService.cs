@@ -10,5 +10,8 @@ namespace final_proyect.Interfaces
         public List<Offers> GetOffersByEnterprise(int enterpriseId);
         public Offers GetOffersById(int offerId);
         public bool ChangeStateOffer(int ofertaId);
-    }
+        public IEnumerable<object> GetAllOffersAndEnterprises();
+        
+
+        }
 }

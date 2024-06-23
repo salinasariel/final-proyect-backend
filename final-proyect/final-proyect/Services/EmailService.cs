@@ -184,6 +184,31 @@ namespace final_proyect.Services
             await smtp.DisconnectAsync(true);
         }
 
+        public async Task SendEnterpriseApplicationNotification(string toEmail, string studentName, string offerTitle)
+        {
+            var message = $@"
+        El estudiante {studentName} se ha postulado a su oferta: {offerTitle}.<br/><br/>
+        Le recomendamos ingresar a la plataforma para revisar la postulación.<br/><br/>
+        ¡Saludos!.
+
+
+        <img src='https://utn.edu.ar/images/logo-utn.png' alt='Logo UTN' style='max-width:400px;' />";
+            var subject = "Nuevo estudiante postulado a su oferta.";
+            var email = new MimeMessage();
+            email.From.Add(new MailboxAddress(_smtpSettings.SenderName, _smtpSettings.SenderEmail));
+            email.To.Add(new MailboxAddress(toEmail, toEmail));
+            email.Subject = subject;
+
+            var bodyBuilder = new BodyBuilder { HtmlBody = message };
+            email.Body = bodyBuilder.ToMessageBody();
+
+            using var smtp = new SmtpClient();
+            await smtp.ConnectAsync(_smtpSettings.Server, _smtpSettings.Port, MailKit.Security.SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync(_smtpSettings.Username, _smtpSettings.Password);
+            await smtp.SendAsync(email);
+            await smtp.DisconnectAsync(true);
+        }
+
     }
 
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -34,7 +35,7 @@ namespace final_proyect.Controllers
             LoginResult loginResult = _authService.Login(dto);
             if (loginResult.Message == "Email incorrecto")
             {
-                return NotFound ("Email incorrecto");
+                return NotFound("Email incorrecto");
             }
             else if (loginResult.Message == "Contraseña incorrecta")
             {
@@ -46,29 +47,31 @@ namespace final_proyect.Controllers
                 var user = _userService.GetUserByEmail(dto.Mail);
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Authentication:SecretForKey"]));
-                
-                var claimsForToken = new List<Claim>();
-                claimsForToken.Add(new Claim("email", user.Email));
-                claimsForToken.Add(new Claim("userid", user.UserId.ToString()));
-                claimsForToken.Add(new Claim("rol", user.Rol.ToString()));
+                var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+                var claimsForToken = new List<Claim>
+        {
+            new Claim("email", user.Email),
+            new Claim("userid", user.UserId.ToString()),
+            new Claim("rol", user.Rol.ToString())
+        };
 
                 var jwtSecurityToken = new JwtSecurityToken(
-                   _config["Authentication:Issuer"],
-                   _config["Authentication:Audience"],
-                   claimsForToken,
-                   DateTime.UtcNow,
-                   DateTime.UtcNow.AddHours(1));
+                    _config["Authentication:Issuer"],
+                    _config["Authentication:Audience"],
+                    claimsForToken,
+                    expires: DateTime.UtcNow.AddHours(1),
+                    signingCredentials: credentials);
+
                 string tokenToReturn = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                 return Ok(tokenToReturn);
             }
-            else 
+            else
             {
                 return BadRequest();
             }
-
         }
 
-          
 
 
 
@@ -101,9 +104,11 @@ namespace final_proyect.Controllers
 
 
 
-        
-        }
-       
-     
+
+
+
     }
+
+
+}
 
