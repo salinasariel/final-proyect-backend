@@ -51,7 +51,7 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("GetAllOffersWithEnterprise")]
         public ActionResult<IEnumerable<object>> GetAllOffers()
         {
             var offers = _offerService.GetAllOffersAndEnterprises();
