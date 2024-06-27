@@ -7,16 +7,27 @@
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\offerscotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\services\\offerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\interfaces\\iofferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|d:\\proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFCAC1F5-A146-4192-B1B8-9C235E25F9F7}|final-proyect\\final-proyect.csproj|solutionrelative:final-proyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,16 +61,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
               "RelativeDocumentMoniker": "final-proyect\\Program.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Program.cs",
               "RelativeToolTip": "final-proyect\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAE4AAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T03:03:36.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T03:03:36.815Z"
             },
             {
               "$type": "Document",
@@ -69,10 +79,9 @@
               "RelativeDocumentMoniker": "final-proyect\\Interfaces\\IOfferService.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Interfaces\\IOfferService.cs",
               "RelativeToolTip": "final-proyect\\Interfaces\\IOfferService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAIwAwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T02:58:58.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T02:58:58.383Z"
             },
             {
               "$type": "Document",
@@ -82,7 +91,7 @@
               "RelativeDocumentMoniker": "final-proyect\\Controllers\\OffersCotroller.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
               "RelativeToolTip": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwD4AAAA1AAAA",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAAwJIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T01:04:47.643Z",
               "EditorCaption": ""
@@ -90,14 +99,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ApplicationController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\ApplicationController.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Controllers\\ApplicationController.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\ApplicationController.cs",
+              "RelativeToolTip": "final-proyect\\Controllers\\ApplicationController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowEsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T21:46:02.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "OfferService.cs",
               "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
               "RelativeDocumentMoniker": "final-proyect\\Services\\OfferService.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
               "RelativeToolTip": "final-proyect\\Services\\OfferService.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAIwDMAAABGAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAgwE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T00:25:28.199Z",
+              "WhenOpened": "2024-06-23T00:25:28.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AQIAAO0AAAAAAAAAAAAIwA0BAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-06-26T18:38:28.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "final-proyect\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\UserController.cs",
+              "RelativeToolTip": "final-proyect\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAG4BAAAAAAAAAAAAAFsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T18:38:42.215Z",
               "EditorCaption": ""
             }
           ]

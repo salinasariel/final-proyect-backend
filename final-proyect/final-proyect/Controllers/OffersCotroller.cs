@@ -13,10 +13,14 @@ namespace final_proyect.Controllers
     public class OffersCotroller : ControllerBase
     {
         private readonly IOfferService _offerService;
+        private readonly IApplicationServices _applicationServices;
+        private readonly IUserService _userService;
 
-        public OffersCotroller(IOfferService offerService)
+        public OffersCotroller(IOfferService offerService, IApplicationServices applicationServices, IUserService userService)
         {
             _offerService = offerService;
+            _applicationServices = applicationServices;
+            _userService = userService;
         }
 
         [Authorize(Policy = "Enterprise")]
@@ -140,6 +144,36 @@ namespace final_proyect.Controllers
         }
 
 
+        [HttpGet("GetOfferByStudent")]
+        public ActionResult<object> GetOfferAndEnterpriseByStudent(int studentId)
+        {
+            try
+            {
+                var aplicacionesEstudiante = _applicationServices.GetApplicationsByStudentId(studentId);
+                var ofertasConEmpresas = new List<object>();
+
+                foreach (var aplicacion in aplicacionesEstudiante)
+                {
+                    var offer = _offerService.GetOffersById(aplicacion.OfferId);
+                    var enterprise = _userService.GetEnterpriseById(offer.UserId);
+
+                    var ofertaConEmpresa = new
+                    {
+                        Offers = offer,
+                        Enterprise = enterprise
+                    };
+
+                    ofertasConEmpresas.Add(ofertaConEmpresa);
+                }
+
+                return Ok(ofertasConEmpresas);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return BadRequest();
+            }
+        }
 
 
     }

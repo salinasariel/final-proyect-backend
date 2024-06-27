@@ -78,6 +78,7 @@ namespace final_proyect.Services
 
 
 
+
         public bool DeleteOfferById(int OfferId)
         {
             try
