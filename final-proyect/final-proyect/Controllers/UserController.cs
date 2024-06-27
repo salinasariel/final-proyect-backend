@@ -97,31 +97,7 @@ namespace final_proyect.Controllers
             }
         }
 
-        [HttpPost("createAdmin")]
-        [Authorize(Policy = "Admin")]
-        public ActionResult<int> CreateAdmin([FromBody] CreateAdminDTO dto)
-        {
-            var passwordHash = _hashData.DataHasher(dto.PasswordHash);
-
-            Admins admin = new Admins()
-            {
-                Email = dto.Email,
-                Name = dto.Name,
-                About = dto.About,
-                PasswordHash = passwordHash,
-            };
-
-            try
-            {
-                var idAdmin = _userService.CreateAdmin(admin);
-                return Ok(admin.UserId);
-            }
-            catch (Exception ex) 
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(500);
-            }
-        }
+        
 
         [HttpPost("register_student")]
         public ActionResult<int> CreateStudent([FromBody] RegisterStudentDTO dto)

@@ -9,6 +9,7 @@ namespace final_proyect.Interfaces
 
         public List<Applications> GetApplicationsByStudentId(int studentId);
         public List<Applications> GetApplicationsByOfferId(int offerId);
+        public bool DeleteApplication(int userId, int offerId);
 
 
     }

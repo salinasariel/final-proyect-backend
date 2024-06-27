@@ -137,14 +137,5 @@ namespace final_proyect.Services
 
 
 
-
-
-            /*public void DeleteOffers()
-            {
-                var allOffers = _context.Offers.ToList();
-                _context.Offers.RemoveRange(allOffers);
-                _context.SaveChanges();
-            }*/
-
         }
 }

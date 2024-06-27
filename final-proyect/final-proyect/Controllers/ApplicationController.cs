@@ -84,15 +84,31 @@ namespace final_proyect.Controllers
             }
         }
 
+        [HttpDelete("DeleteApplication")]
+        public IActionResult DeleteApplication(int userId, int offerId)
+        {
+            var success = _services.DeleteApplication(userId, offerId);
+
+            if (success)
+            {
+                return Ok("Aplicación eliminada exitosamente.");
+            }
+            else
+            {
+                return NotFound("No se encontró la aplicación.");
+            }
+        }
 
 
 
-       
-    
 
 
 
 
 
-}
+
+
+
+
+    }
 }

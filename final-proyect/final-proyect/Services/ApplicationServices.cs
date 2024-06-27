@@ -67,6 +67,22 @@ namespace final_proyect.Services
             return _context.Applications.Where(a => a.OfferId == offerId).ToList();
         }
 
+        public bool DeleteApplication(int userId, int offerId)
+        {
+            var application = _context.Applications.SingleOrDefault(a => a.UserId == userId && a.OfferId == offerId);
+
+            if (application == null)
+            {
+                return false; 
+            }
+
+            _context.Applications.Remove(application);
+            _context.SaveChanges();
+
+            return true; 
+        }
+
+
 
 
     }
