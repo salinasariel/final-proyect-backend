@@ -1,6 +1,7 @@
 ﻿using final_proyect.HashData;
 using final_proyect.Interfaces;
 using final_proyect.Models.Dto;
+using final_proyect.Services;
 using final_proyect_backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,13 +15,13 @@ namespace final_proyect.Controllers
         private readonly IUserService _userService;
         private readonly IHashData _hashData;
 
-        public AdminController(IUserService userService)
+        public AdminController(IUserService userService, IHashData hashData)
         {
             _userService = userService;
+            _hashData = hashData;
         }
 
         [HttpPost("createAdmin")]
-        [Authorize(Policy = "Admin")]
         public ActionResult<int> CreateAdmin([FromBody] CreateAdminDTO dto)
         {
             var passwordHash = _hashData.DataHasher(dto.PasswordHash);
