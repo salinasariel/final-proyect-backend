@@ -30,11 +30,13 @@ namespace final_proyect.Controllers
                 Console.WriteLine($"Estudiante ID:{application.UserId} postulado a Oferta ID: {application.OfferId} | IDpost: {application.ApplicationID}");
                 return Ok(application);
             }
-            else 
+            else
             {
-                return BadRequest();
+                return BadRequest("Ya existe una postulacion del alumno a esta oferta"); 
             }
         }
+
+
 
         [HttpGet("GetAllApplications")]
         public ActionResult <List<Applications>> GetAllApplications()
