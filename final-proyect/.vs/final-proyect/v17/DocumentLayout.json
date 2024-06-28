@@ -82,7 +82,8 @@
               "RelativeToolTip": "final-proyect\\Models\\Applications.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T02:36:58.666Z"
+              "WhenOpened": "2024-06-28T02:36:58.666Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -92,9 +93,10 @@
               "RelativeDocumentMoniker": "final-proyect\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\AdminController.cs",
               "RelativeToolTip": "final-proyect\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAhAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwBUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T23:29:17.811Z"
+              "WhenOpened": "2024-06-27T23:29:17.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -104,7 +106,7 @@
               "RelativeDocumentMoniker": "final-proyect\\Controllers\\ApplicationController.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\ApplicationController.cs",
               "RelativeToolTip": "final-proyect\\Controllers\\ApplicationController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAABFAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwCIAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T21:58:57.44Z",
               "EditorCaption": ""
@@ -117,7 +119,7 @@
               "RelativeDocumentMoniker": "final-proyect\\Services\\ApplicationServices.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\ApplicationServices.cs",
               "RelativeToolTip": "final-proyect\\Services\\ApplicationServices.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wDIAAAA3AAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T21:58:44.433Z",
               "EditorCaption": ""
@@ -130,7 +132,7 @@
               "RelativeDocumentMoniker": "final-proyect\\Services\\OfferService.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Services\\OfferService.cs",
               "RelativeToolTip": "final-proyect\\Services\\OfferService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAAsAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T14:24:50.105Z",
               "EditorCaption": ""
@@ -143,7 +145,7 @@
               "RelativeDocumentMoniker": "final-proyect\\Controllers\\OffersCotroller.cs",
               "ToolTip": "D:\\Proyectos\\final-proyect-backend\\final-proyect\\final-proyect\\Controllers\\OffersCotroller.cs",
               "RelativeToolTip": "final-proyect\\Controllers\\OffersCotroller.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T14:24:40.333Z",
               "EditorCaption": ""
@@ -184,7 +186,8 @@
               "RelativeToolTip": "final-proyect\\Interfaces\\IApplicationServices.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T22:00:33.817Z"
+              "WhenOpened": "2024-06-27T22:00:33.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
