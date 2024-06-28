@@ -54,3 +54,7 @@ UTN Job Board is a web platform developed for the National Technological Univers
    git clone https://github.com/salinasariel/final-proyect-backend
    cd final-proyect-backend
 
+### Members
+Napolitano Matias - https://github.com/MathyNp
+Salinas German Ariel - https://github.com/salinasariel
+Vazquez Julian - https://github.com/julianvazquez12
