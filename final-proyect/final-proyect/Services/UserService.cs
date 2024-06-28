@@ -26,9 +26,9 @@ namespace final_proyect.Services
 
         public void NotifyEnterprise(Enterprises enterprise, Offers offer, Students student)
         {
-            // Lógica para notificar a la empresa
+            
             Console.WriteLine($"Enterprise {enterprise.Name} notified about student {student.Name} applying to offer {offer.Tittle}");
-            // Aquí podrías enviar un email, una notificación push, etc.
+            
         }
 
         public int CreateAdmin(Admins admin)

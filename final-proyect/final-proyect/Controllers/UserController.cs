@@ -116,6 +116,8 @@ namespace final_proyect.Controllers
             try
             {
                 var studentID = _userService.CreateStudent(studentRegister);
+
+                _emailService.SendInitialEmailStudent(studentRegister.Email, studentRegister.Name, studentRegister.FileNumber);
                 return Ok($"Estudiante {dto.Name} | Legajo: {dto.FileNumber}");
             }
             catch (Exception ex)
