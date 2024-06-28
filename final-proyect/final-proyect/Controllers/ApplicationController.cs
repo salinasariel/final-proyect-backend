@@ -32,7 +32,7 @@ namespace final_proyect.Controllers
             }
             else
             {
-                return BadRequest("Ya existe una postulacion del alumno a esta oferta"); 
+                return BadRequest("No se pudo realizar la postulacion"); 
             }
         }
 

@@ -9,11 +9,13 @@ namespace final_proyect.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly OfferSubject _offerSubject;
+        private readonly IUserService _userService;
 
-        public ApplicationServices(ApplicationDbContext context, OfferSubject offerSubject)
+        public ApplicationServices(ApplicationDbContext context, OfferSubject offerSubject, IUserService userService)
         {
             _context = context;
             _offerSubject = offerSubject;
+            _userService = userService;
         }
 
         // 1 - Postulado
@@ -28,6 +30,12 @@ namespace final_proyect.Services
             var offer = _context.Offers.SingleOrDefault(a => a.OfferId == offerId);
 
             if (student == null || offer == null)
+            {
+                return false;
+            }
+
+            student = _userService.GetStudentById(studentId); 
+            if (student == null || !student.UserState)
             {
                 return false;
             }

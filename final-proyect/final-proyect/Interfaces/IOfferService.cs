@@ -11,7 +11,9 @@ namespace final_proyect.Interfaces
         public Offers GetOffersById(int offerId);
         public bool ChangeStateOffer(int ofertaId);
         public IEnumerable<object> GetAllOffersAndEnterprises();
-        
+        public IEnumerable<object> GetAllOffersAndEnterprisesTrue();
+
+
 
         }
 }

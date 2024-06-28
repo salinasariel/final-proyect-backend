@@ -62,6 +62,15 @@ namespace final_proyect.Controllers
             return Ok(offers);
         }
 
+        [HttpGet("GetAllOffersWithEnterpriseTrue")]
+        public ActionResult<IEnumerable<object>> GetAllOffersTrue()
+        {
+            var offers = _offerService.GetAllOffersAndEnterprisesTrue();
+            return Ok(offers);
+        }
+
+
+
         [Authorize(Policy = "AdminOrEnterprise")]
         [HttpDelete("DeleteOffer/{OfferId}")]
         public IActionResult DeleteOffer(int OfferId)

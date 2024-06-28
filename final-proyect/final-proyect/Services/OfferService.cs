@@ -25,17 +25,29 @@ namespace final_proyect.Services
         {
             try
             {
-                offer.OfferState = true;
-                _context.Add(offer);
-                _context.SaveChanges();
-                return offer.OfferId;
+                
+                var enterprise = _userService.GetEnterpriseById(offer.UserId);
+                if (enterprise != null && enterprise.UserState)
+                {
+                    offer.OfferState = true;
+                    _context.Add(offer);
+                    _context.SaveChanges();
+                    return offer.OfferId;
+                }
+                else
+                {
+                    Console.WriteLine("La empresa no está habilitada para crear ofertas.");
+                    return -1; 
+                }
             }
-            catch 
+            catch
             {
                 Console.WriteLine("Error al crear la oferta laboral");
                 throw;
             }
         }
+
+
         public List<Offers> GetOffers()
         {
             return _context.Offers.Where(u => u.OfferState == true).ToList();
@@ -76,6 +88,42 @@ namespace final_proyect.Services
             return offersWithEnterprises;
         }
 
+        public IEnumerable<object> GetAllOffersAndEnterprisesTrue()
+        {
+            var offers = _context.Offers
+                .Where(o => o.OfferState)
+                .ToList();
+
+            var offersWithEnterprises = new List<object>();
+
+            foreach (var offer in offers)
+            {
+                var enterprise = _userService.GetEnterpriseById(offer.UserId);
+                var offerWithEnterprise = new
+                {
+                    offer.OfferId,
+                    offer.Tittle,
+                    offer.About,
+                    offer.PublishedDate,
+                    offer.FinishDate,
+                    offer.From,
+                    offer.Location,
+                    offer.Sector,
+                    offer.SkillsRequired,
+                    offer.InmediteIncorporation,
+                    offer.Intern,
+                    offer.CareerMinimumAge,
+                    offer.CareersInterested,
+                    offer.InternTime,
+                    offer.IsPaid,
+                    offer.OfferState,
+                    Enterprise = enterprise
+                };
+                offersWithEnterprises.Add(offerWithEnterprise);
+            }
+
+            return offersWithEnterprises;
+        }
 
 
 
