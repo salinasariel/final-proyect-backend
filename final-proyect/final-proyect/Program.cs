@@ -25,11 +25,11 @@ builder.Services.AddScoped<OfferSubject, OfferSubject>();
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Policys",
-        builder => builder
-            .WithOrigins("http://localhost:5173")
-            .AllowAnyHeader()
-            .AllowAnyMethod());
+    options.AddPolicy("Policys",builder => builder
+        .AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+    );
 });
 
 builder.Services.AddEndpointsApiExplorer();
