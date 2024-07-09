@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "epRdSgxlIYoEjVzqjlX8/v6MvKojYgNOz9sQmOrHUgB38UltD3uIoVsFwys4WFC/Vm+s2bkp5X52la/6lqllAQ==",
+  "dgSpecHash": "mzgnu/ax7q5UpswSeCtCGwnMf03dhf/ik/Vwctx16VP3/u+Vd1DTSa3BIU557qwkggckCs1NrPrKpr4zG2+lcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Ariel\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\Ariel\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
     "C:\\Users\\Ariel\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Ariel\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
     "C:\\Users\\Ariel\\.nuget\\packages\\mimekit\\4.5.0\\mimekit.4.5.0.nupkg.sha512",
     "C:\\Users\\Ariel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Ariel\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
