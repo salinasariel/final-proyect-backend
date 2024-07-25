@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
+    "C:\\Users\\Ariel Salinas\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
+    "C:\\Users\\Ariel Salinas\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "projectUniqueName": "C:\\Users\\Ariel Salinas\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
         "projectName": "final-proyect",
-        "projectPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
-        "packagesPath": "C:\\Users\\Ariel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ariel\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
+        "projectPath": "C:\\Users\\Ariel Salinas\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\final-proyect.csproj",
+        "packagesPath": "C:\\Users\\Ariel Salinas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ariel Salinas\\Documents\\GitHub\\final-proyect-backend\\final-proyect\\final-proyect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariel Salinas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -104,6 +110,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.32, 6.0.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.32, 6.0.32]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -112,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
