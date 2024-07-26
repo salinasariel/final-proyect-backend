@@ -21,13 +21,8 @@ RUN dotnet publish "./final-proyect.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-# Copy the database to the final container
-COPY ["final-proyect/works.db", "/app/"]
 
-# Add the init script
-COPY final-proyect/init.sh /app/init.sh
+RUN rm -f /app/works.db \
+    && cp /src/final-proyect/works.db /app/
 
-# Ensure the script has executable permissions
-RUN chmod +x /app/init.sh
-
-ENTRYPOINT ["/app/init.sh"]
+ENTRYPOINT ["dotnet", "final-proyect.dll"]
