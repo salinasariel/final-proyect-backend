@@ -22,7 +22,10 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-RUN rm -f /app/works.db \
-    && cp /src/final-proyect/works.db /app/
+# Elimina la base de datos existente si existe
+RUN if [ -f /app/works.db ]; then rm /app/works.db; fi
+
+# Copia la nueva base de datos
+COPY ["final-proyect/works.db", "/app/"]
 
 ENTRYPOINT ["dotnet", "final-proyect.dll"]
